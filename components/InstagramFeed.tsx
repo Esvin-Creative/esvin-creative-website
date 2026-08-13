@@ -1,15 +1,6 @@
 "use client";
 
 import Script from "next/script";
-import React from "react";
-// Declare custom element for TypeScript compilation
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "behold-widget": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement> & { "feed-id": string }, HTMLElement>;
-    }
-  }
-}
 
 export default function InstagramFeed() {
   return (

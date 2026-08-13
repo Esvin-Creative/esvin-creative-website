@@ -1,26 +1,57 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle2, ShieldCheck, Zap, CloudCog, HeadphonesIcon, Blocks } from "lucide-react";
+import { CheckCircledIcon, LockClosedIcon, LightningBoltIcon, GearIcon, ChatBubbleIcon, CubeIcon } from "@radix-ui/react-icons";
+import Image from "next/image";
 import SketchHighlight from "./SketchHighlight";
 
 const reasons = [
-  { title: "End-to-End Development", icon: <Blocks size={24} strokeWidth={1.5} /> },
-  { title: "Modern Technology Stack", icon: <Zap size={24} strokeWidth={1.5} /> },
-  { title: "AI-First Thinking", icon: <ShieldCheck size={24} strokeWidth={1.5} /> },
-  { title: "Cloud Migration Capabilities", icon: <CloudCog size={24} strokeWidth={1.5} /> },
-  { title: "Competitive Pricing", icon: <CheckCircle2 size={24} strokeWidth={1.5} /> },
-  { title: "After-Deployment Support", icon: <HeadphonesIcon size={24} strokeWidth={1.5} /> },
+  {
+    title: "Proven Track Record",
+    description: "Delivering high-quality solutions for enterprises and startups alike.",
+    icon: <CheckCircledIcon className="w-8 h-8 text-black" />,
+    color: "bg-highlight-pink"
+  },
+  {
+    title: "Enterprise Security",
+    description: "Bank-grade security protocols integrated from day one.",
+    icon: <LockClosedIcon className="w-8 h-8 text-black" />,
+    color: "bg-highlight-blue"
+  },
+  {
+    title: "Lightning Fast",
+    description: "Optimized performance for exceptional user experiences.",
+    icon: <LightningBoltIcon className="w-8 h-8 text-black" />,
+    color: "bg-highlight-yellow"
+  },
+  {
+    title: "Cloud Native",
+    description: "Scalable architecture built on AWS and Google Cloud.",
+    icon: <GearIcon className="w-8 h-8 text-black" />,
+    color: "bg-highlight-pink"
+  },
+  {
+    title: "24/7 Support",
+    description: "Dedicated engineering team ready when you need them.",
+    icon: <ChatBubbleIcon className="w-8 h-8 text-black" />,
+    color: "bg-highlight-blue"
+  },
+  {
+    title: "Modular Design",
+    description: "Component-driven architecture for rapid iteration.",
+    icon: <CubeIcon className="w-8 h-8 text-black" />,
+    color: "bg-highlight-yellow"
+  }
 ];
 
 export default function WhyChooseUs() {
   return (
     <section className="py-24 bg-white border-t-2 border-dashed border-black relative">
       <div className="absolute right-5 top-5 opacity-30">
-         <img src="/assets/icons/question-sign-hand-drawn-outline-svgrepo-com.svg" className="w-16 h-16" alt="" />
+         <Image src="/assets/icons/question-sign-hand-drawn-outline-svgrepo-com.svg" alt="Question mark decorative graphic" width={64} height={64} className="w-16 h-16" />
       </div>
       <div className="absolute left-10 bottom-20 opacity-20 hidden md:block">
-        <img src="/assets/icons/sparkles-drawn.svg" className="w-20 h-20 animate-wobble" style={{ animationDelay: '0.3s' }} alt="" />
+        <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles decorative graphic" width={80} height={80} className="w-20 h-20 animate-wobble" style={{ animationDelay: '0.3s' }} />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -35,7 +66,7 @@ export default function WhyChooseUs() {
             <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
               <SketchHighlight color="pink">Why Choose EC</SketchHighlight>
             </h2>
-            <p className="mt-4 text-black/80 text-xl font-sketch leading-relaxed">
+            <p className="mt-4 text-black/80 text-xl font-ultra leading-relaxed">
               We don&apos;t just write code. We partner with you to build scalable, high-performance systems with exceptional design.
             </p>
           </motion.div>
@@ -50,7 +81,7 @@ export default function WhyChooseUs() {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center gap-4 p-4 bg-white sketch-border sketch-shadow relative group"
               >
-                <img src="/assets/icons/star-drawn.svg" className="absolute -top-3 -right-3 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity" alt="" />
+                <Image src="/assets/icons/star-drawn.svg" alt="Star hover effect graphic" width={32} height={32} className="absolute -top-3 -right-3 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="flex-shrink-0 h-12 w-12 rounded-full border-2 border-dashed border-black flex items-center justify-center text-black">
                   {reason.icon}
                 </div>

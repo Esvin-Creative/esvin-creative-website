@@ -1,7 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import SketchHighlight from "./SketchHighlight";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 const steps = [
   { num: "01", title: "Discovery", desc: "Understanding your requirements and defining project goals." },
@@ -12,62 +13,61 @@ const steps = [
 ];
 
 export default function Process() {
+  const targetRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
+
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-75%"]); 
+
   return (
-    <section id="process" className="py-24 bg-white text-black overflow-hidden relative">
-      
-      <div className="absolute top-24 left-10 opacity-30">
-        <img src="/assets/icons/navigation-arrow-with-broken-line-svgrepo-com.svg" className="w-48 h-48" alt="" />
-      </div>
-      <div className="absolute bottom-10 right-20 opacity-20 hidden md:block">
-        <img src="/assets/icons/sparkles-drawn.svg" className="w-24 h-24 animate-wobble" style={{ animationDelay: '0.8s' }} alt="" />
-      </div>
+    <section ref={targetRef} id="process" className="relative h-[300vh] bg-white">
+      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+        
+        <div className="absolute top-20 -left-16 md:-left-8 opacity-30">
+          <Image src="/assets/icons/navigation-arrow-with-broken-line-svgrepo-com.svg" alt="Dashed navigation arrow decorative graphic" width={192} height={192} className="w-48 h-48" />
+        </div>
+        
+        <div className="pl-6 md:pl-12 relative z-10 w-full flex flex-col justify-center h-full">
+          <div className="mb-12 mt-12 shrink-0">
+            <h2 className="relative inline-block text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
+              Our Process
+              <Image src="/assets/icons/underline-drawn.svg" alt="Hand drawn underline emphasis graphic" width={200} height={24} className="absolute -bottom-4 -left-[5%] w-[110%] h-6 opacity-50" />
+            </h2>
+            <p className="mt-4 text-black/80 text-xl max-w-2xl font-ultra">
+              A systematic, engineering-driven approach to delivering reliable software.
+            </p>
+          </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-16 text-center"
-        >
-          <h2 className="relative inline-block text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
-            Our Process
-            <img src="/assets/icons/underline-drawn.svg" className="absolute -bottom-4 -left-[5%] w-[110%] h-6 opacity-50" alt="" />
-          </h2>
-          <p className="mt-4 text-black/80 text-xl max-w-2xl mx-auto font-sketch">
-            A systematic, engineering-driven approach to delivering reliable software.
-          </p>
-        </motion.div>
-
-        <div className="relative">
-          
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {steps.map((step, index) => (
-              <motion.div
-                key={step.num}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative bg-white sketch-border sketch-shadow p-6 group"
-              >
-                <div className="h-16 w-16 rounded-full bg-transparent flex items-center justify-center text-black font-sketch font-bold text-2xl mb-6 relative z-10">
-                  <img src="/assets/icons/circle-drawn.svg" className="absolute inset-0 w-full h-full opacity-60" alt="" />
-                  <span className="relative z-10 group-hover:scale-110 transition-transform">{step.num}</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-                <p className="text-black/70 text-lg leading-relaxed font-sketch">
-                  {step.desc}
-                </p>
-
-                
-                {index < steps.length - 1 && (
-                  <div className="hidden md:block absolute -right-6 top-1/2 transform -translate-y-1/2 z-0 opacity-50">
-                    <img src="/assets/icons/rotated-right-arrow-svgrepo-com.svg" className="w-10 h-10" alt="" />
+          <div className="w-full overflow-visible">
+            <motion.div style={{ x }} className="flex gap-16 md:gap-24 w-[250vw] md:w-[150vw]">
+              {steps.map((step, index) => (
+                <div
+                  key={step.num}
+                  style={{ zIndex: steps.length - index }}
+                  className="relative bg-white sketch-border sketch-shadow p-8 flex-shrink-0 w-[85vw] md:w-[450px] h-[350px] flex flex-col justify-between group"
+                >
+                  <div>
+                    <div className="h-16 w-16 rounded-full bg-transparent flex items-center justify-center text-black font-ultra font-bold text-2xl mb-6 relative z-10">
+                      <Image src="/assets/icons/circle-drawn.svg" alt="Hand drawn circle highlighting step number" width={64} height={64} className="absolute inset-0 w-full h-full opacity-60" />
+                      <span className="relative z-10 group-hover:scale-110 transition-transform">{step.num}</span>
+                    </div>
+                    <h3 className="text-3xl font-bold mb-4">{step.title}</h3>
+                    <p className="text-black/70 text-lg leading-relaxed font-ultra">
+                      {step.desc}
+                    </p>
                   </div>
-                )}
-              </motion.div>
-            ))}
+                  
+                  {index < steps.length - 1 && (
+                    <div className="absolute -right-[4.5rem] md:-right-[6.5rem] top-1/2 transform -translate-y-1/2 z-0 opacity-40">
+                      <Image src="/assets/icons/rotated-right-arrow-svgrepo-com.svg" alt="Right arrow connecting process steps" width={64} height={64} className="w-16 h-16" />
+                    </div>
+                  )}
+                </div>
+              ))}
+              {/* Padding to allow the last card to reach the center before unpinning */}
+              <div className="w-[10vw] md:w-[30vw] flex-shrink-0"></div>
+            </motion.div>
           </div>
         </div>
       </div>

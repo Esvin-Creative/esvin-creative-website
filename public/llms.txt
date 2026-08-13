@@ -1,0 +1,40 @@
+# Esvin Creative
+
+> Esvin Creative is a technology consulting and software engineering firm based in Hyderabad, India. We act as an end-to-end technology partner for organizations, taking full ownership of technical architecture, development, and long-term support.
+
+## Core Services
+
+- **Custom Software Development**: We engineer custom business platforms, internal operational tools, customer portals, and full-scale SaaS applications tailored to specific business needs. 
+- **Mobile App Development**: We build high-performance native iOS, native Android, and cross-platform Flutter applications. We also manage App Store and Google Play publishing and compliance.
+- **Cloud Infrastructure & DevOps**: We architect, migrate, and manage scalable cloud infrastructure on AWS, Google Cloud Platform (GCP), and Vercel. We automate CI/CD pipelines, containerize applications, and ensure rigorous security and disaster recovery.
+- **Technology Consulting**: Strategic IT consulting designed to align technology investments with business goals through digital transformation, technology audits, architecture reviews, and vendor consolidation.
+
+## Who We Serve
+We serve a diverse range of clients globally and locally in India, including:
+- Educational Institutions
+- Startups & Scale-ups
+- SMEs & Enterprise
+- Non-Profits
+- Professional Services
+
+## Contact & Information
+- **Location**: Hyderabad, Telangana, India
+- **Email**: hello@esvincreative.in
+- **Website**: [https://esvincreative.in](https://esvincreative.in)
+- **GitHub**: [https://github.com/Esvin-Creative](https://github.com/Esvin-Creative)
+
+## Site Structure & Important Links
+- [Home](https://esvincreative.in/)
+- [Services Hub](https://esvincreative.in/services)
+- [Software Development](https://esvincreative.in/software-development)
+- [Mobile App Development](https://esvincreative.in/mobile-app-development)
+- [Cloud Infrastructure](https://esvincreative.in/cloud-infrastructure)
+- [Technology Consulting](https://esvincreative.in/technology-consulting)
+- [Portfolio](https://esvincreative.in/portfolio)
+- [Case Studies](https://esvincreative.in/case-studies)
+- [Company Profile](https://esvincreative.in/company)
+- [About Us](https://esvincreative.in/about)
+- [Contact](https://esvincreative.in/contact)
+
+## Why Esvin Creative?
+Esvin Creative bridges the gap between high-level business strategy and deep technical execution. Rather than just providing advisory reports, we have the in-house engineering capabilities to build, deploy, and maintain the solutions we recommend, eliminating the complexity of managing multiple vendors.

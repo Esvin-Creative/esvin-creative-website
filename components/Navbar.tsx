@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,9 +19,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "Process", href: "#process" },
-    { name: "About", href: "#about" },
+    { name: "Services", href: "/services" },
+    { name: "Process", href: "/#process" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -31,14 +32,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          
+        <Link href="/" className="relative flex items-center justify-center w-20 md:w-24 h-10 md:h-12">
           <Image
             src="/logos/icon.png"
             alt="Esvin Creative"
             width={160}
             height={160}
-            className="h-24 w-auto object-contain"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-20 md:h-28 w-auto object-contain max-w-none"
           />
         </Link>
 
@@ -48,14 +48,14 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-2xl font-bold font-sketch text-black hover:text-black/60 transition-colors"
+              className="text-2xl font-bold font-ultra text-black hover:text-black/60 transition-colors"
             >
               {link.name}
             </Link>
           ))}
           <Link
-            href="#contact"
-            className="px-6 py-2 text-xl font-bold font-sketch text-black bg-highlight-yellow sketch-border sketch-shadow hover:bg-white transition-colors"
+            href="/contact"
+            className="px-6 py-2 text-xl font-bold font-ultra text-black bg-highlight-yellow sketch-border sketch-shadow hover:bg-white transition-colors"
           >
             Start Your Project
           </Link>
@@ -63,10 +63,10 @@ export default function Navbar() {
 
         
         <button
-          className="md:hidden text-black p-2"
+          className="md:hidden text-black p-2 flex items-center justify-center w-10 h-10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X size={24} strokeWidth={1.5} /> : <Menu size={24} strokeWidth={1.5} />}
+          {isMobileMenuOpen ? <Cross1Icon className="w-6 h-6" /> : <HamburgerMenuIcon className="w-6 h-6" />}
         </button>
       </div>
 
@@ -81,15 +81,15 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-2xl font-bold font-sketch text-black"
+              className="text-2xl font-bold font-ultra text-black"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
           ))}
           <Link
-            href="#contact"
-            className="inline-block text-center px-6 py-2 text-2xl font-bold font-sketch text-black bg-highlight-yellow sketch-border sketch-shadow"
+            href="/contact"
+            className="inline-block text-center px-6 py-2 text-2xl font-bold font-ultra text-black bg-highlight-yellow sketch-border sketch-shadow"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Start Your Project

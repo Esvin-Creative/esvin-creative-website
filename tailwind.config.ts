@@ -24,7 +24,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
-        sketch: ["var(--font-kalam)", "cursive"],
+        ultra: ["var(--font-bricolage)", "sans-serif"],
       },
       keyframes: {
         wobble: {

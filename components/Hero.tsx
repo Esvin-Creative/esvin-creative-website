@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import SketchHighlight from "./SketchHighlight";
 import TypingEffect from "./TypingEffect";
 
@@ -18,12 +19,12 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="mb-8 relative"
         >
-          <span className="font-sketch text-3xl md:text-4xl text-black">We are Esvin Creative</span>
-          <img src="/assets/icons/bars-graphic-up-hand-drawn-symbol-svgrepo-com.svg" alt="" className="absolute -right-16 -top-10 w-16 h-16 opacity-70" />
+          <span className="font-ultra text-3xl md:text-4xl text-black">We are Esvin Creative</span>
+          <Image src="/assets/icons/bars-graphic-up-hand-drawn-symbol-svgrepo-com.svg" alt="Hand drawn upward bars graphic representing growth" width={64} height={64} className="absolute -right-16 -top-10 opacity-70" />
         </motion.div>
 
         <h1 className="relative text-5xl md:text-7xl font-bold tracking-tight max-w-5xl leading-tight">
-          <img src="/assets/icons/sparkles-drawn.svg" alt="" className="absolute -left-12 -top-12 w-20 h-20 opacity-80 animate-wobble" />
+          <Image src="/assets/icons/sparkles-drawn.svg" alt="Hand drawn sparkles graphic representing creativity" width={80} height={80} className="absolute -left-12 -top-12 opacity-80 animate-wobble" priority />
           <motion.span 
             initial={{ opacity: 1 }} 
             animate={{ opacity: 0.3 }} 
@@ -71,7 +72,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.5 }}
-          className="mt-8 text-xl md:text-2xl text-black/80 max-w-3xl font-sketch"
+          className="mt-8 text-xl md:text-2xl text-black/80 max-w-3xl font-ultra"
         >
           Esvin Creative builds websites, mobile apps, and AI-powered solutions that help businesses operate, grow, and scale.
         </motion.p>
@@ -82,7 +83,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 1.8 }}
           className="mt-12 flex flex-col sm:flex-row gap-6 w-full sm:w-auto relative"
         >
-          <img src="/assets/icons/rotated-right-arrow-svgrepo-com.svg" alt="" className="absolute -left-20 -top-16 w-24 h-24 hidden md:block opacity-60" />
+          <Image src="/assets/icons/rotated-right-arrow-svgrepo-com.svg" alt="Hand drawn right arrow pointing to schedule consultation" width={96} height={96} className="absolute -left-20 -top-16 hidden md:block opacity-60" />
           <Link
             href="#contact"
             className="group flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold text-black bg-white sketch-border sketch-shadow hover:bg-highlight-yellow transition-all"

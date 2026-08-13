@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const technologies = [
   "Next.js", "TypeScript", "Tailwind CSS", "React",
@@ -12,10 +13,10 @@ export default function TechStack() {
   return (
     <section className="py-20 bg-subtle-grid border-t-2 border-dashed border-black overflow-hidden relative">
       <div className="absolute right-10 top-20 opacity-30 hidden md:block">
-        <img src="/assets/icons/sparkles-drawn.svg" className="w-28 h-28 animate-wobble" alt="" />
+        <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles decorative graphic" width={112} height={112} className="w-28 h-28 animate-wobble" />
       </div>
       <div className="absolute left-10 bottom-10 opacity-30 hidden md:block">
-        <img src="/assets/icons/sparkles-drawn.svg" className="w-20 h-20 animate-wobble" style={{ animationDelay: '1s' }} alt="" />
+        <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles decorative graphic" width={80} height={80} className="w-20 h-20 animate-wobble" style={{ animationDelay: '1s' }} />
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
         <motion.div
@@ -27,7 +28,7 @@ export default function TechStack() {
         >
           <h2 className="relative inline-block text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
             Powered By Modern Technologies
-            <img src="/assets/icons/underline-drawn.svg" className="absolute -bottom-4 -left-[5%] w-[110%] h-6 opacity-50" alt="" />
+            <Image src="/assets/icons/underline-drawn.svg" alt="Drawn underline decorative element" width={200} height={24} className="absolute -bottom-4 -left-[5%] w-[110%] h-6 opacity-50" />
           </h2>
         </motion.div>
         

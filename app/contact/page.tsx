@@ -33,13 +33,13 @@ export default function ContactPage() {
     body.append("entry.1321263650", formData.email);
     body.append("entry.290646291", formData.project);
     
-    // Budget range mapped to Google Form field (requires sentinel to register)
+   
     body.append("entry.1801704685_sentinel", "");
     if (formData.budget) {
       body.append("entry.1801704685", formData.budget);
     }
 
-    // Google Forms hidden metadata fields required to bypass strict validation
+   
     body.append("fvv", "1");
     body.append("pageHistory", "0");
     try {
@@ -63,7 +63,7 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Contact Hero */}
+      
       <section className="relative pt-40 pb-16 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
         <Image src="/assets/icons/speech-bubble-drawn.svg" alt="" width={100} height={100} className="absolute top-20 right-10 md:right-32 opacity-60 animate-wobble" />
         
@@ -81,7 +81,7 @@ export default function ContactPage() {
         </motion.div>
       </section>
 
-      {/* Main Contact Section */}
+      
       <section className="relative py-16 bg-white border-t-2 border-dashed border-black/10">
         <div className="absolute left-5 top-20 opacity-30">
           <Image src="/assets/icons/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" alt="" width={100} height={100} />
@@ -89,7 +89,7 @@ export default function ContactPage() {
         
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-5 gap-16 relative z-10">
           
-          {/* Contact Information */}
+          
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -143,7 +143,7 @@ export default function ContactPage() {
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}

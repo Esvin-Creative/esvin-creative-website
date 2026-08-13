@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   const validatePhone = (phone: string) => {
-    // Strip spaces, dashes, parentheses to validate the raw numbers
+   
     const cleaned = phone.replace(/[\s\-()]/g, "");
     return /^\+?[0-9]{10,15}$/.test(cleaned);
   };
@@ -57,17 +57,17 @@ export default function Contact() {
     body.append("entry.736719861", formData.company);
     body.append("entry.1321263650", formData.email);
     
-    // Append the phone number to the project description so it gets collected in the sheet
+   
     const descriptionWithPhone = `Phone Number: ${formData.phone}\n\nDescription:\n${formData.project}`;
     body.append("entry.290646291", descriptionWithPhone);
     
-    // Budget range mapped to Google Form field (requires sentinel to register)
+   
     body.append("entry.1801704685_sentinel", "");
     if (formData.budget) {
       body.append("entry.1801704685", formData.budget);
     }
 
-    // Google Forms hidden metadata fields required to bypass strict validation
+   
     body.append("fvv", "1");
     body.append("pageHistory", "0");
 
@@ -137,7 +137,7 @@ export default function Contact() {
               </div>
               <form className="w-full space-y-6" onSubmit={handleSubmit}>
                 
-                {/* Row 1: Name & Company */}
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-xl font-ultra font-bold text-black">Name *</label>
@@ -165,7 +165,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Row 2: Email & Phone */}
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-xl font-ultra font-bold text-black">Email *</label>
@@ -195,7 +195,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Row 3: Budget Range */}
+                
                 <div className="space-y-2">
                   <label htmlFor="budget" className="text-xl font-ultra font-bold text-black">Budget Range</label>
                   <select
@@ -212,7 +212,7 @@ export default function Contact() {
                   </select>
                 </div>
 
-                {/* Row 4: Project Description */}
+                
                 <div className="space-y-2">
                   <label htmlFor="project" className="text-xl font-ultra font-bold text-black">Project Description *</label>
                   <textarea

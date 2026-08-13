@@ -20,7 +20,7 @@ export default function CompanyPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero Section */}
+      
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
         <div className="absolute left-10 top-32 opacity-30">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
@@ -48,7 +48,7 @@ export default function CompanyPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
           
           <div className="lg:col-span-2 space-y-16">
-            {/* Overview & Mission */}
+            
             <div className="space-y-6">
               <h2 className="text-4xl font-bold font-ultra text-black border-b-2 border-black pb-4 inline-block">Our Mission</h2>
               <p className="text-xl font-ultra text-black/80 leading-relaxed">
@@ -56,7 +56,7 @@ export default function CompanyPage() {
               </p>
             </div>
 
-            {/* Services Quick Links */}
+            
             <div className="space-y-6">
               <h2 className="text-4xl font-bold font-ultra text-black border-b-2 border-black pb-4 inline-block">Core Competencies</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -74,14 +74,14 @@ export default function CompanyPage() {
               </div>
             </div>
 
-            {/* Social Presence */}
+            
             <div className="space-y-6">
               <h2 className="text-4xl font-bold font-ultra text-black border-b-2 border-black pb-4 inline-block">Social Profiles</h2>
               <div className="flex flex-wrap gap-6">
                 <a href="https://github.com/Esvin-Creative" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-4 bg-black text-white font-ultra sketch-border hover:-translate-y-1 transition-transform">
                   <GitHubLogoIcon className="w-6 h-6" /> GitHub
                 </a>
-                {/* Placeholders for coming soon */}
+                
                 <div className="flex items-center gap-3 px-6 py-4 bg-gray-100 text-black/50 font-ultra sketch-border cursor-not-allowed" title="Coming Soon">
                   <LinkedInLogoIcon className="w-6 h-6" /> LinkedIn (Soon)
                 </div>
@@ -92,7 +92,7 @@ export default function CompanyPage() {
             </div>
           </div>
 
-          {/* Sidebar / Business Info */}
+          
           <div className="lg:col-span-1">
             <div className="sticky top-32">
               <LocalBusinessInfo />

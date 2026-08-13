@@ -6,7 +6,7 @@ export interface Testimonial {
   authorTitle: string;
   company: string;
   quote: string;
-  rating?: number; // 1-5
+  rating?: number;
 }
 
 interface TestimonialsProps {
@@ -14,8 +14,8 @@ interface TestimonialsProps {
 }
 
 export default function Testimonials({ testimonials = [] }: TestimonialsProps) {
-  // We'll generate aggregateRating or Review schemas here eventually.
-  // For now, returning an empty structured data or standard schema template based on available data.
+ 
+ 
   const hasTestimonials = testimonials && testimonials.length > 0;
 
   return (

@@ -5,10 +5,10 @@ import SketchHighlight from "@/components/SketchHighlight";
 import Link from "next/link";
 import Script from "next/script";
 
-// This is a template page for dynamic case studies.
-// In a real implementation, you'd fetch data based on the slug.
+
+
 export default function CaseStudyPage({ params }: { params: { slug: string } }) {
-  const isPlaceholder = true; // For now, all routes hit the placeholder
+  const isPlaceholder = true;
 
   const articleSchema = {
     "@context": "https://schema.org",

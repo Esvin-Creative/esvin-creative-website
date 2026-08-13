@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Process from "@/components/Process";
 import About from "@/components/About";
+import Philosophy from "@/components/Philosophy";
 import TechStack from "@/components/TechStack";
 import InstagramFeed from "@/components/InstagramFeed";
 import Contact from "@/components/Contact";
@@ -24,6 +25,7 @@ export default function Home() {
       <Process />
       <Testimonials />
       <About />
+      <Philosophy />
       <TechStack />
       <InstagramFeed />
       <Contact />

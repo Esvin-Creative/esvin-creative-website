@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 };
 
 export default function CaseStudiesHubPage() {
-  // Placeholder array for future case studies
+ 
   const caseStudies: any[] = [
-    // { title: "Modernizing Legacy Architecture", slug: "modernizing-legacy", category: "Digital Transformation" }
+   
   ];
 
   return (

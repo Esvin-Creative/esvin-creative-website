@@ -27,7 +27,7 @@ export default function Hero() {
           <Image src="/assets/icons/sparkles-drawn.svg" alt="Hand drawn sparkles graphic representing creativity" width={80} height={80} className="absolute -left-12 -top-12 opacity-80 animate-wobble" priority />
           <motion.span 
             initial={{ opacity: 1 }} 
-            animate={{ opacity: 0.3 }} 
+            animate={{ opacity: 0.6 }} 
             transition={{ delay: 1.6, duration: 1 }}
           >
             <TypingEffect text="Custom Software Built To " speed={0.03} />
@@ -36,7 +36,7 @@ export default function Hero() {
           <SketchHighlight color="yellow" delay={1.25}>
             <motion.span 
               initial={{ opacity: 1 }} 
-              animate={{ opacity: 0.3 }} 
+              animate={{ opacity: 0.6 }} 
               transition={{ delay: 1.6, duration: 1 }}
               className="inline-block"
             >

@@ -12,10 +12,10 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <Navbar />
       
-      {/* Hero Section */}
+      
       <section className="relative pt-40 pb-20 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
-        <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="absolute top-20 left-10 md:left-20 opacity-40 animate-wobble" />
-        <Image src="/assets/icons/loop-arrows-svgrepo-com.svg" alt="" width={100} height={100} className="absolute bottom-10 right-10 md:right-20 opacity-20" />
+        <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles decorative graphic" width={80} height={80} className="absolute top-20 left-10 md:left-20 opacity-40 animate-wobble" />
+        <Image src="/assets/icons/loop-arrows-svgrepo-com.svg" alt="Loop arrows decorative graphic" width={100} height={100} className="absolute bottom-10 right-10 md:right-20 opacity-20" />
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -31,10 +31,10 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      {/* Why We Exist */}
+      
       <section className="relative py-24 bg-subtle-grid border-t-2 border-dashed border-black">
         <div className="absolute left-5 bottom-10 opacity-30">
-          <Image src="/assets/icons/question-sign-hand-drawn-outline-svgrepo-com.svg" alt="" width={80} height={80} />
+          <Image src="/assets/icons/question-sign-hand-drawn-outline-svgrepo-com.svg" alt="Question mark decorative graphic" width={80} height={80} />
         </div>
         
         <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
@@ -46,10 +46,10 @@ export default function AboutPage() {
           >
             <h2 className="relative inline-block text-4xl font-bold text-black mb-12 text-center w-full">
               Why Esvin Creative Exists
-              <Image src="/assets/icons/underline-drawn.svg" alt="" width={200} height={20} className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[60%] h-5 opacity-50" />
+              <Image src="/assets/icons/underline-drawn.svg" alt="Underline emphasis graphic" width={200} height={20} className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[60%] h-5 opacity-50" />
             </h2>
             <div className="bg-white sketch-border sketch-shadow p-10 space-y-6 text-xl font-ultra text-black/80 leading-relaxed relative group">
-              <Image src="/assets/icons/star-drawn.svg" alt="" width={40} height={40} className="absolute -top-4 -right-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <Image src="/assets/icons/star-drawn.svg" alt="Star decorative graphic" width={40} height={40} className="absolute -top-4 -right-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               <p>
                 Modern organizations frequently struggle with fragmented technology. When systems are built in silos and maintained by multiple specialized vendors, managing that complexity becomes a full-time job. 
               </p>
@@ -64,7 +64,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founder Section (Placeholder) */}
+      
       <section className="py-24 bg-white border-t-2 border-dashed border-black">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <motion.h2 
@@ -107,12 +107,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Capabilities */}
+      
       <section className="relative py-24 bg-subtle-grid border-t-2 border-dashed border-black">
         <div className="max-w-6xl mx-auto px-6 md:px-12 text-center">
           <h2 className="relative inline-block text-4xl font-bold text-black mb-12">
             Our Capabilities
-            <Image src="/assets/icons/underline-drawn.svg" alt="" width={200} height={20} className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-full h-5 opacity-50" />
+            <Image src="/assets/icons/underline-drawn.svg" alt="Underline emphasis graphic" width={200} height={20} className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-full h-5 opacity-50" />
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -133,14 +133,14 @@ export default function AboutPage() {
               >
                 <h3 className="text-2xl font-bold text-black mb-4">{cap.title}</h3>
                 <p className="text-lg font-ultra text-black/70">{cap.desc}</p>
-                <Image src="/assets/icons/star-drawn.svg" alt="" width={30} height={30} className="absolute -top-3 -right-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <Image src="/assets/icons/star-drawn.svg" alt="Star hover graphic" width={30} height={30} className="absolute -top-3 -right-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process */}
+      
       <section className="py-24 bg-white border-t-2 border-dashed border-black">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <h2 className="text-4xl font-bold text-black mb-12 text-center">
@@ -165,7 +165,7 @@ export default function AboutPage() {
                 className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
               >
                 <div className="flex items-center justify-center w-12 h-12 rounded-full border-2 border-black bg-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[4px_4px_0_0_rgba(0,0,0,1)] relative z-10">
-                  <Image src="/assets/icons/circle-drawn.svg" alt="" width={48} height={48} className="absolute inset-0 opacity-60" />
+                  <Image src="/assets/icons/circle-drawn.svg" alt="Circle emphasis graphic" width={48} height={48} className="absolute inset-0 opacity-60" />
                   <span className="font-bold text-black relative z-10">{step.num}</span>
                 </div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white sketch-border sketch-shadow p-6">

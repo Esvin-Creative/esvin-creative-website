@@ -95,7 +95,7 @@ export default function MobileAppDevelopmentPage() {
       <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      {/* Hero Section */}
+      
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
         <div className="absolute right-10 top-40 opacity-30">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
@@ -121,7 +121,7 @@ export default function MobileAppDevelopmentPage() {
         </div>
       </section>
 
-      {/* Platforms & Support Section */}
+      
       <section className="py-24 px-6 md:px-12 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -174,7 +174,7 @@ export default function MobileAppDevelopmentPage() {
         </div>
       </section>
 
-      {/* Benefits */}
+      
       <section className="py-24 px-6 md:px-12 bg-gray-50 border-y-2 border-dashed border-black text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold font-ultra text-black mb-12">The Esvin Creative Advantage</h2>
@@ -200,7 +200,7 @@ export default function MobileAppDevelopmentPage() {
 
       <AISearchBlocks title="AI Overview: Mobile App Development" blocks={aiSearchBlocks} />
       
-      {/* Related Case Studies Placeholder */}
+      
       <section className="py-24 px-6 md:px-12 bg-white border-y-2 border-dashed border-black">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold font-ultra text-black mb-6">Related Case Studies</h2>
@@ -213,7 +213,7 @@ export default function MobileAppDevelopmentPage() {
 
       <FAQ title="Mobile App FAQs" faqs={serviceFaqs} />
 
-      {/* CTA Section */}
+      
       <section className="py-24 bg-highlight-yellow border-t-2 border-dashed border-black text-center px-6 relative overflow-hidden">
         <div className="absolute right-10 top-10 opacity-30">
           <Image src="/assets/icons/star-drawn.svg" alt="" width={60} height={60} className="w-16 h-16 animate-wobble" />

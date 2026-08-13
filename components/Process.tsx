@@ -65,7 +65,7 @@ export default function Process() {
                   )}
                 </div>
               ))}
-              {/* Padding to allow the last card to reach the center before unpinning */}
+              
               <div className="w-[10vw] md:w-[30vw] flex-shrink-0"></div>
             </motion.div>
           </div>

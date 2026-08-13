@@ -35,12 +35,12 @@ const services = [
 ];
 
 const getT = (p: number, totalCards: number) => {
-  if (p >= 1) return totalCards - 0.01; // prevent out of bounds on exact 1
+  if (p >= 1) return totalCards - 0.01;
   const segment = 1 / totalCards; 
   const currentSegment = Math.floor(p / segment); 
   const pInSegment = (p % segment) / segment; 
   
-  // 65% of the scroll is paused for reading, 35% is the shuffling animation
+ 
   const readingRatio = 0.65; 
   
   if (pInSegment < readingRatio) {
@@ -61,19 +61,19 @@ const Card = ({ service, index, progress, totalCards }: { service: any, index: n
     
     const shuffleStart = totalCards - 1; 
     if (cyclePos > shuffleStart) {
-      const shuffleProgress = totalCards - cyclePos; // 0 to 1
+      const shuffleProgress = totalCards - cyclePos;
       
       if (shuffleProgress < 0.5) {
-        // fly up
+       
         return -(shuffleProgress * 2) * 800;
       } else {
-        // come down to the back
+       
         const downProgress = (shuffleProgress - 0.5) * 2; 
         return -800 + (downProgress * (800 + shuffleStart * 40));
       }
     }
     
-    // Normal stack
+   
     return cyclePos * 40; 
   });
 
@@ -175,8 +175,8 @@ export default function Services() {
           <h2 className="text-5xl md:text-6xl font-bold text-black tracking-tight mb-6">
             <SketchHighlight color="pink">What We Do</SketchHighlight>
           </h2>
-          <p className="mt-4 text-2xl text-black/80 max-w-2xl mx-auto font-ultra">
-            Keep scrolling to unpack our services.
+          <p className="text-xl font-ultra text-black/70 max-w-3xl mx-auto leading-relaxed">
+            We provide end-to-end technology solutions tailored to your organization's unique challenges. From architecting scalable cloud infrastructure to engineering high-performance mobile applications and enterprise software, our team acts as your dedicated technical partner.
           </p>
         </div>
 

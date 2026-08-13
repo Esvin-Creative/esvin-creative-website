@@ -9,24 +9,34 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage" });
 
 export const metadata: Metadata = {
-  title: "Esvin Creative | Software Development, Mobile Apps & Cloud Infrastructure",
-  description: "Esvin Creative helps organizations build, modernize, and manage digital systems through software development, mobile applications, cloud infrastructure, and technology consulting.",
+  metadataBase: new URL('https://esvincreative.in'),
+  title: "Esvin Creative | Software & Cloud Engineering",
+  description: "End-to-end technology partner for custom software, mobile apps, and cloud infrastructure. We engineer digital scale.",
   keywords: ["software development company hyderabad", "mobile app development company hyderabad", "cloud infrastructure services", "technology consulting", "digital transformation", "custom software development", "web development company india"],
   alternates: {
-    canonical: "https://esvincreative.in",
+    canonical: "/",
   },
   openGraph: {
-    title: "Esvin Creative | Software Development, Mobile Apps & Cloud Infrastructure",
-    description: "Esvin Creative helps organizations build, modernize, and manage digital systems through software development, mobile applications, cloud infrastructure, and technology consulting.",
+    title: "Esvin Creative | Software & Cloud Engineering",
+    description: "End-to-end technology partner for custom software, mobile apps, and cloud infrastructure. We engineer digital scale.",
     url: "https://esvincreative.in",
     siteName: "Esvin Creative",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Esvin Creative - Technology Consulting and Software Engineering",
+      }
+    ],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Esvin Creative | Software Development, Mobile Apps & Cloud Infrastructure",
-    description: "Esvin Creative helps organizations build, modernize, and manage digital systems through software development, mobile applications, cloud infrastructure, and technology consulting.",
+    title: "Esvin Creative | Software & Cloud Engineering",
+    description: "End-to-end technology partner for custom software, mobile apps, and cloud infrastructure. We engineer digital scale.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -79,7 +89,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         
-        {/* Google Analytics */}
+        
         <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-C7JGX7G0D2" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
@@ -90,7 +100,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Structured Data */}
+        
         <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
         <Script id="website-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       </body>

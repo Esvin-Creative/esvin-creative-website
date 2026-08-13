@@ -5,7 +5,7 @@ export default function InstagramFeed() {
   return (
     <section className="py-24 bg-[#f8fafc] text-black overflow-hidden relative border-t-2 border-dashed border-black">
       
-      {/* Hand drawn details */}
+      
       <div className="absolute bottom-10 right-20 opacity-20 hidden md:block">
         <img src="/assets/icons/sparkles-drawn.svg" className="w-24 h-24 animate-wobble" style={{ animationDelay: '0.8s' }} alt="" />
       </div>

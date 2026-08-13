@@ -62,6 +62,16 @@ export default function Footer() {
                     esvincreative.in
                   </a>
                 </li>
+                <li>
+                  <a href="https://instagram.com/esvincreative.in" target="_blank" rel="noopener noreferrer" className="text-lg font-ultra text-black/70 hover:text-black transition-colors">
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/Esvin-Creative" target="_blank" rel="noopener noreferrer" className="text-lg font-ultra text-black/70 hover:text-black transition-colors">
+                    GitHub
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

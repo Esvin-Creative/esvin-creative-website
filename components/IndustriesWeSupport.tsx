@@ -13,7 +13,7 @@ export default function IndustriesWeSupport() {
   return (
     <section className="py-24 px-6 md:px-12 bg-white border-y-2 border-dashed border-black relative overflow-hidden">
       <div className="absolute right-10 top-10 opacity-30">
-        <Image src="/assets/icons/star-drawn.svg" alt="" width={60} height={60} className="w-16 h-16 animate-wobble" />
+        <Image src="/assets/icons/star-drawn.svg" alt="Star decorative graphic" width={60} height={60} className="w-16 h-16 animate-wobble" />
       </div>
       
       <div className="max-w-7xl mx-auto">

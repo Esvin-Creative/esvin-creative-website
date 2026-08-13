@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-white pt-16 pb-8 border-t-2 border-dashed border-black relative overflow-hidden">
       <div className="absolute top-10 right-20 opacity-10 hidden md:block z-0 pointer-events-none">
-        <img src="/assets/sparkles-drawn.svg" className="w-40 h-40 animate-wobble" style={{ animationDelay: '2s' }} alt="" />
+        <img src="/assets/icons/sparkles-drawn.svg" className="w-40 h-40 animate-wobble" style={{ animationDelay: '2s' }} alt="" />
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">

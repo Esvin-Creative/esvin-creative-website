@@ -17,8 +17,8 @@ const config: Config = {
           pink: "#ffb7b2",
         },
         brand: {
-          navy: "#0f172a", // Dark navy accent
-          blue: "#3b82f6", // Subtle blue highlight
+          navy: "#0f172a",
+          blue: "#3b82f6",
           light: "#f8fafc",
         },
       },

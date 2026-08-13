@@ -33,7 +33,7 @@ export default function Contact() {
         mode: "no-cors",
         body: body,
       });
-      // no-cors always returns opaque response, so we just assume success if it didn't throw a network error
+     
       setStatus("success");
       setFormData({ name: "", company: "", email: "", project: "" });
     } catch (error) {
@@ -48,10 +48,10 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-white relative">
       
       <div className="absolute left-10 bottom-20 opacity-30">
-        <img src="/assets/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" className="w-24 h-24" alt="" />
+        <img src="/assets/icons/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" className="w-24 h-24" alt="" />
       </div>
       <div className="absolute right-10 top-40 opacity-20 hidden md:block">
-        <img src="/assets/sparkles-drawn.svg" className="w-28 h-28 animate-wobble" style={{ animationDelay: '1.5s' }} alt="" />
+        <img src="/assets/icons/sparkles-drawn.svg" className="w-28 h-28 animate-wobble" style={{ animationDelay: '1.5s' }} alt="" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
@@ -62,9 +62,10 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16 relative inline-block w-full"
         >
-          <img src="/assets/speech-bubble-drawn.svg" className="absolute -top-16 right-0 md:right-32 w-20 h-20 opacity-60" alt="" />
-          <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-6 relative z-10">
-            <SketchHighlight color="yellow">Let&apos;s Build Something Great.</SketchHighlight>
+          <img src="/assets/icons/speech-bubble-drawn.svg" className="absolute -top-16 right-0 md:right-32 w-20 h-20 opacity-60" alt="" />
+          <h2 className="relative inline-block text-4xl md:text-5xl font-bold text-black tracking-tight mb-6 z-10">
+            Let&apos;s Build Something Great.
+            <img src="/assets/icons/underline-drawn.svg" className="absolute -bottom-4 -left-[5%] w-[110%] h-6 opacity-50" alt="" />
           </h2>
           <p className="text-2xl text-black/80 font-sketch">
             Reach out to discuss your next project, or just to say hello.

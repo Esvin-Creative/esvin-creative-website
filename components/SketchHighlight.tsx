@@ -12,9 +12,9 @@ interface SketchHighlightProps {
 }
 
 const colorMap = {
-  yellow: "bg-highlight-yellow",
-  blue: "bg-highlight-blue",
-  pink: "bg-highlight-pink",
+  yellow: "rgba(253, 253, 150, 0.6)",
+  blue: "rgba(174, 198, 207, 0.6)",
+  pink: "rgba(255, 183, 178, 0.6)",
 };
 
 export default function SketchHighlight({
@@ -24,19 +24,22 @@ export default function SketchHighlight({
   className,
 }: SketchHighlightProps) {
   return (
-    <span className={clsx("relative inline-block whitespace-nowrap", className)}>
-      <motion.span
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true, margin: "-50px" }}
-        transition={{ duration: 0.6, delay, ease: "easeOut" }}
-        style={{ transformOrigin: "left center", borderRadius: "10px 30px 10px 40px" }}
-        className={clsx(
-          "absolute left-0 top-[40%] h-[70%] w-[102%] z-0 opacity-60 rotate-[-1deg]",
-          colorMap[color]
-        )}
-      />
-      <span className="relative z-10">{children}</span>
-    </span>
+    <motion.span
+      initial={{ backgroundSize: "0% 70%" }}
+      whileInView={{ backgroundSize: "100% 70%" }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      style={{
+        backgroundImage: `linear-gradient(to right, ${colorMap[color]}, ${colorMap[color]})`,
+        backgroundPosition: "0 80%",
+        backgroundRepeat: "no-repeat",
+        boxDecorationBreak: "clone",
+        WebkitBoxDecorationBreak: "clone",
+        borderRadius: "10px 30px 10px 40px",
+      }}
+      className={clsx("relative inline text-black", className)}
+    >
+      {children}
+    </motion.span>
   );
 }

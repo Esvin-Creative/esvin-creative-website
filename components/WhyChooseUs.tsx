@@ -17,10 +17,10 @@ export default function WhyChooseUs() {
   return (
     <section className="py-24 bg-white border-t-2 border-dashed border-black relative">
       <div className="absolute right-5 top-5 opacity-30">
-         <img src="/assets/question-sign-hand-drawn-outline-svgrepo-com.svg" className="w-16 h-16" alt="" />
+         <img src="/assets/icons/question-sign-hand-drawn-outline-svgrepo-com.svg" className="w-16 h-16" alt="" />
       </div>
       <div className="absolute left-10 bottom-20 opacity-20 hidden md:block">
-        <img src="/assets/sparkles-drawn.svg" className="w-20 h-20 animate-wobble" style={{ animationDelay: '0.3s' }} alt="" />
+        <img src="/assets/icons/sparkles-drawn.svg" className="w-20 h-20 animate-wobble" style={{ animationDelay: '0.3s' }} alt="" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
             className="md:w-1/3 mb-8 md:mb-0"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
-              <SketchHighlight color="blue">Why Choose EC</SketchHighlight>
+              <SketchHighlight color="pink">Why Choose EC</SketchHighlight>
             </h2>
             <p className="mt-4 text-black/80 text-xl font-sketch leading-relaxed">
               We don&apos;t just write code. We partner with you to build scalable, high-performance systems with exceptional design.
@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
                 transition={{ delay: index * 0.1 }}
                 className="flex items-center gap-4 p-4 bg-white sketch-border sketch-shadow relative group"
               >
-                <img src="/assets/star-drawn.svg" className="absolute -top-3 -right-3 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity" alt="" />
+                <img src="/assets/icons/star-drawn.svg" className="absolute -top-3 -right-3 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity" alt="" />
                 <div className="flex-shrink-0 h-12 w-12 rounded-full border-2 border-dashed border-black flex items-center justify-center text-black">
                   {reason.icon}
                 </div>

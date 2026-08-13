@@ -31,13 +31,13 @@ export default function Services() {
   return (
     <section id="services" className="py-24 relative overflow-hidden bg-white">
       <div className="absolute top-0 right-10 w-24 h-24 opacity-40">
-        <img src="/assets/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" alt="" />
+        <img src="/assets/icons/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" alt="" />
       </div>
       <div className="absolute bottom-40 left-10 w-32 h-32 opacity-20 hidden md:block">
-        <img src="/assets/sparkles-drawn.svg" className="animate-wobble" alt="" />
+        <img src="/assets/icons/sparkles-drawn.svg" className="animate-wobble" alt="" />
       </div>
       <div className="absolute top-40 right-20 w-24 h-24 opacity-20 hidden md:block">
-        <img src="/assets/sparkles-drawn.svg" className="animate-wobble" style={{ animationDelay: '0.5s' }} alt="" />
+        <img src="/assets/icons/sparkles-drawn.svg" className="animate-wobble" style={{ animationDelay: '0.5s' }} alt="" />
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <motion.div 
@@ -47,9 +47,8 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="relative inline-block text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
-            Our Services
-            <img src="/assets/underline-drawn.svg" className="absolute -bottom-6 left-0 w-full h-8 opacity-70 text-highlight-pink" style={{ filter: 'drop-shadow(0px 0px 2px rgba(255,183,178,1))' }} alt="" />
+          <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
+            <SketchHighlight color="blue">Our Services</SketchHighlight>
           </h2>
           <p className="mt-4 text-xl text-black/80 max-w-2xl mx-auto font-sketch">
             We deliver robust technical solutions engineered to solve complex problems and scale alongside your business.
@@ -71,7 +70,7 @@ export default function Services() {
               </div>
               <h3 className="text-3xl font-bold text-black mb-3 relative inline-block">
                 {service.title}
-                <img src="/assets/asterisk-drawn.svg" className="absolute -right-8 -top-2 w-6 h-6 opacity-40" alt="" />
+                <img src="/assets/icons/asterisk-drawn.svg" className="absolute -right-8 -top-2 w-6 h-6 opacity-40" alt="" />
               </h3>
               <p className="text-black/70 leading-relaxed text-lg font-sketch">
                 {service.description}

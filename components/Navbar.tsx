@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          {/* Using the icon requested by the user */}
+          
           <Image
             src="/logos/icon.png"
             alt="Esvin Creative"
@@ -42,7 +42,7 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Nav */}
+        
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -61,7 +61,7 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile Nav Toggle */}
+        
         <button
           className="md:hidden text-black p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -70,7 +70,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      
       {isMobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}

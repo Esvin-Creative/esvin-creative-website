@@ -12,10 +12,10 @@ export default function TechStack() {
   return (
     <section className="py-20 bg-subtle-grid border-t-2 border-dashed border-black overflow-hidden relative">
       <div className="absolute right-10 top-20 opacity-30 hidden md:block">
-        <img src="/assets/sparkles-drawn.svg" className="w-28 h-28 animate-wobble" alt="" />
+        <img src="/assets/icons/sparkles-drawn.svg" className="w-28 h-28 animate-wobble" alt="" />
       </div>
       <div className="absolute left-10 bottom-10 opacity-30 hidden md:block">
-        <img src="/assets/sparkles-drawn.svg" className="w-20 h-20 animate-wobble" style={{ animationDelay: '1s' }} alt="" />
+        <img src="/assets/icons/sparkles-drawn.svg" className="w-20 h-20 animate-wobble" style={{ animationDelay: '1s' }} alt="" />
       </div>
       <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
         <motion.div
@@ -25,8 +25,9 @@ export default function TechStack() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
+          <h2 className="relative inline-block text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
             Powered By Modern Technologies
+            <img src="/assets/icons/underline-drawn.svg" className="absolute -bottom-4 -left-[5%] w-[110%] h-6 opacity-50" alt="" />
           </h2>
         </motion.div>
         

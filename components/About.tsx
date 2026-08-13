@@ -7,10 +7,10 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-white relative">
       <div className="absolute right-10 bottom-10 opacity-40">
-        <img src="/assets/question-sign-hand-drawn-outline-svgrepo-com.svg" className="w-32 h-32" alt="" />
+        <img src="/assets/icons/question-sign-hand-drawn-outline-svgrepo-com.svg" className="w-32 h-32" alt="" />
       </div>
       <div className="absolute left-10 top-20 opacity-30 hidden md:block">
-        <img src="/assets/sparkles-drawn.svg" className="w-24 h-24 animate-wobble" alt="" />
+        <img src="/assets/icons/sparkles-drawn.svg" className="w-24 h-24 animate-wobble" alt="" />
       </div>
 
       <div className="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">

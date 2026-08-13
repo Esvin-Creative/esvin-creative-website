@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter, Kalam } from "next/font/google";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
+
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const kalam = Kalam({ weight: ["300", "400", "700"], subsets: ["latin"], variable: "--font-kalam" });
@@ -22,7 +25,11 @@ export default function RootLayout({
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
-      <body className={`${inter.variable} ${kalam.variable} antialiased bg-white text-black`}>{children}</body>
+      <body className={`${inter.variable} ${kalam.variable} antialiased bg-white text-black overflow-x-hidden`}>
+        {children}
+        <Analytics />
+        <SpeedInsights />
+      </body>
     </html>
   );
 }

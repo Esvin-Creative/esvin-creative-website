@@ -24,6 +24,10 @@ body {
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-padding-top: 120px;
+}
+
 ::selection {
   background-color: #3b82f6;
   color: white;

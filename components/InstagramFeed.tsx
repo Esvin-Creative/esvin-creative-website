@@ -1,6 +1,5 @@
 "use client";
 
-import Script from "next/script";
 
 export default function InstagramFeed() {
   return (
@@ -21,19 +20,10 @@ export default function InstagramFeed() {
           </p>
         </div>
 
-        {/* Behold.so Widget Container */}
-        <div className="bg-white sketch-border sketch-shadow p-4 md:p-6">
-          <behold-widget feed-id="mDLSN021AhRPTyhuH4MN"></behold-widget>
-        </div>
+
       </div>
 
-      {/* Behold widget script */}
-      <Script
-        id="behold-script"
-        type="module"
-        src="https://w.behold.so/widget.js"
-        strategy="afterInteractive"
-      />
+
     </section>
   );
 }

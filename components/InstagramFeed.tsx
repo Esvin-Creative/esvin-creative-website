@@ -1,7 +1,7 @@
 "use client";
 
 import Script from "next/script";
-
+import React from "react";
 // Declare custom element for TypeScript compilation
 declare global {
   namespace JSX {

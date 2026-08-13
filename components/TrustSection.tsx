@@ -121,7 +121,7 @@ export default function TrustSection() {
                 onClick={() => setActiveDemo('byf')}
                 className="inline-flex w-fit items-center gap-2 px-4 py-2 mt-2 bg-black text-white text-sm font-bold hover:bg-highlight-blue hover:text-black transition-colors sketch-border"
               >
-                <ImageIcon size={16} /> View Samples
+                <ImageIcon className="w-4 h-4" /> View Samples
               </button>
             </div>
           </motion.div>

@@ -9,54 +9,54 @@ import Footer from "@/components/Footer";
 import SketchHighlight from "@/components/SketchHighlight";
 
 const BASE_PACKAGES = [
-  { id: "landing", name: "Landing Page (1 page)", price: 15000, category: "Website" },
-  { id: "business", name: "Business Website (5 pages)", price: 35000, category: "Website" },
-  { id: "corp", name: "Corporate Website (10+ pages)", price: 60000, category: "Website" },
-  { id: "ecom", name: "E-Commerce Store", price: 75000, category: "E-Commerce" },
-  { id: "webapp", name: "Custom Web App", price: 100000, category: "Web App" },
-  { id: "android", name: "Android App", price: 80000, category: "Mobile App" },
-  { id: "crossplatform", name: "Android + iOS App", price: 150000, category: "Mobile App" },
+  { id: "landing", name: "Landing Page (1 page)", price: 10000, category: "Website" },
+  { id: "business", name: "Business Website (5 pages)", price: 25000, category: "Website" },
+  { id: "corp", name: "Corporate Website (10+ pages)", price: 45000, category: "Website" },
+  { id: "ecom", name: "E-Commerce Store", price: 55000, category: "E-Commerce" },
+  { id: "webapp", name: "Custom Web App", price: 75000, category: "Web App" },
+  { id: "android", name: "Android App", price: 50000, category: "Mobile App" },
+  { id: "crossplatform", name: "Android + iOS App", price: 95000, category: "Mobile App" },
 ];
 
 const FEATURES: Record<string, {id: string, name: string, price: number}[]> = {
   "Authentication": [
-    { id: "f-login", name: "Login & Signup", price: 10000 },
-    { id: "f-glogin", name: "Google Login", price: 5000 },
-    { id: "f-roles", name: "Multi-user Roles", price: 15000 },
+    { id: "f-login", name: "Login & Signup", price: 5000 },
+    { id: "f-glogin", name: "Google Login", price: 1000 },
+    { id: "f-roles", name: "Multi-user Roles", price: 6000 },
   ],
   "Payments": [
-    { id: "f-razorpay", name: "Razorpay Integration", price: 10000 },
-    { id: "f-subs", name: "Subscription Billing", price: 20000 },
+    { id: "f-razorpay", name: "Razorpay Integration", price: 5000 },
+    { id: "f-subs", name: "Subscription Billing", price: 10000 },
   ],
   "Communication & Booking": [
-    { id: "f-contact", name: "Contact Forms", price: 3000 },
-    { id: "f-email", name: "Email Notifications", price: 5000 },
-    { id: "f-sms", name: "SMS Notifications", price: 8000 },
-    { id: "f-booking", name: "Appointment Booking", price: 15000 },
-    { id: "f-cal", name: "Calendar Integration", price: 8000 },
+    { id: "f-contact", name: "Contact Forms", price: 0 },
+    { id: "f-email", name: "Email Notifications", price: 3000 },
+    { id: "f-sms", name: "SMS Notifications", price: 5000 },
+    { id: "f-booking", name: "Appointment Booking", price: 8000 },
+    { id: "f-cal", name: "Calendar Integration", price: 5000 },
   ],
   "Dashboard & AI": [
-    { id: "f-admin", name: "Admin Dashboard", price: 20000 },
-    { id: "f-analytics", name: "Analytics Dashboard", price: 25000 },
-    { id: "f-chatbot", name: "AI Chatbot", price: 20000 },
-    { id: "f-aigen", name: "AI Content Generation", price: 35000 },
-    { id: "f-aidoc", name: "AI Document Processing", price: 50000 },
+    { id: "f-admin", name: "Admin Dashboard", price: 12000 },
+    { id: "f-analytics", name: "Analytics Dashboard", price: 12000 },
+    { id: "f-chatbot", name: "AI Chatbot", price: 10000 },
+    { id: "f-aigen", name: "AI Content Generation", price: 15000 },
+    { id: "f-aidoc", name: "AI Document Processing", price: 25000 },
   ],
   "Storage & Misc": [
-    { id: "f-upload", name: "File Uploads", price: 8000 },
-    { id: "f-cloud", name: "Cloud Storage Setup", price: 10000 },
-    { id: "f-maps", name: "Google Maps", price: 5000 },
-    { id: "f-search", name: "Advanced Search", price: 10000 },
+    { id: "f-upload", name: "File Uploads", price: 3000 },
+    { id: "f-cloud", name: "Cloud Storage Setup", price: 3500 },
+    { id: "f-maps", name: "Google Maps", price: 2000 },
+    { id: "f-search", name: "Advanced Search", price: 5000 },
   ]
 };
 
 const DESIGN_AND_CONTENT = [
-  { id: "d-premium", name: "Premium UI Design", price: 15000 },
-  { id: "d-anim", name: "Custom Animations", price: 10000 },
-  { id: "d-logo", name: "Logo Design", price: 5000 },
-  { id: "d-brand", name: "Brand Guidelines", price: 10000 },
-  { id: "c-write", name: "Content Writing (5 pgs)", price: 10000 },
-  { id: "c-seo", name: "SEO Optimization", price: 5000 },
+  { id: "d-premium", name: "Premium UI Design", price: 10000 },
+  { id: "d-anim", name: "Custom Animations", price: 5000 },
+  { id: "d-logo", name: "Logo Design", price: 3500 },
+  { id: "d-brand", name: "Brand Guidelines", price: 6000 },
+  { id: "c-write", name: "Content Writing (5 pgs)", price: 6000 },
+  { id: "c-seo", name: "SEO Optimization", price: 3000 },
 ];
 
 export default function CalculatorPage() {

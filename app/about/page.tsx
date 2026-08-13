@@ -140,6 +140,7 @@ export default function AboutPage() {
         </div>
       </section>
 
+      
       <section className="py-24 bg-white border-t-2 border-dashed border-black">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <h2 className="text-4xl font-bold text-black mb-12 text-center">

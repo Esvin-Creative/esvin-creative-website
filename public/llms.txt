@@ -35,6 +35,8 @@ We serve a diverse range of clients globally and locally in India, including:
 - [Company Profile](https://esvincreative.in/company)
 - [About Us](https://esvincreative.in/about)
 - [Contact](https://esvincreative.in/contact)
+- [Pricing](https://esvincreative.in/pricing)
+- [Project Cost Calculator](https://esvincreative.in/pricing/calculator)
 
 ## Why Esvin Creative?
 Esvin Creative bridges the gap between high-level business strategy and deep technical execution. Rather than just providing advisory reports, we have the in-house engineering capabilities to build, deploy, and maintain the solutions we recommend, eliminating the complexity of managing multiple vendors.

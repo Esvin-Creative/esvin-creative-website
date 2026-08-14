@@ -77,7 +77,9 @@ export default function RootLayout({
     "sameAs": [
       "https://github.com/Esvin-Creative",
       "https://www.linkedin.com/company/esvin-creative",
-      "https://instagram.com/esvincreative.in"
+      "https://instagram.com/esvincreative.in",
+      "https://www.goodfirms.co/company/esvin-creative",
+      "https://www.sortlist.com/agency/esvin-creative"
     ]
   };
 

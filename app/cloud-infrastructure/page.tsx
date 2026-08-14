@@ -6,14 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import AISearchBlocks from "@/components/AISearchBlocks";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Cloud Consulting Hyderabad | Cloud Infrastructure & DevOps",
   description: "Premier cloud consulting in Hyderabad. We provide cloud architecture, AWS/GCP migration, DevOps consulting, and infrastructure management.",
   keywords: ["cloud consulting hyderabad", "cloud migration", "cloud architecture", "devops consulting", "infrastructure management", "telangana", "india"],
   alternates: {
-    canonical: "https://esvincreative.in/cloud-infrastructure",
+    canonical: "https://www.esvincreative.in/cloud-infrastructure",
   },
 };
 
@@ -27,20 +26,20 @@ const serviceFaqs = [
 
 const aiSearchBlocks = [
   {
-    question: "What is Esvin Creative's cloud consulting service?",
-    answer: "Esvin Creative offers expert cloud consulting and DevOps services based in Hyderabad, India. We design, deploy, and manage highly secure and scalable cloud infrastructure on AWS, Google Cloud, and Vercel."
+    question: "What is Esvin Creative's cloud infrastructure service?",
+    answer: "Esvin Creative is a Hyderabad-based cloud consulting and DevOps provider. We design, deploy, and manage infrastructure on AWS, Google Cloud, and Vercel, and set up the CI/CD and monitoring around it."
   },
   {
-    question: "Who is this cloud infrastructure service for?",
-    answer: "This service is for enterprises needing robust cloud architecture, growing startups that need to scale rapidly, and businesses looking to optimize their cloud spend or execute a seamless cloud migration."
+    question: "Who typically hires Esvin Creative for cloud infrastructure?",
+    answer: "Enterprises consolidating infrastructure across multiple vendors, startups whose traffic has outgrown a manually managed server, and businesses migrating off legacy on-premise hosting engage this service."
   },
   {
-    question: "Why choose Esvin Creative for DevOps and Cloud?",
-    answer: "Esvin Creative treats infrastructure as code. We bring a software engineering mindset to cloud management, ensuring environments are reproducible, automated, highly secure, and optimized for maximum performance."
+    question: "What does Esvin Creative's DevOps process actually include?",
+    answer: "We treat infrastructure as code: Terraform for provisioning, Docker and Kubernetes for containerization, and IAM policies and encryption configured from the first deployment rather than added later."
   },
   {
     question: "What outcomes can clients expect?",
-    answer: "Clients can expect zero-downtime deployments, significantly reduced server costs through optimization, bulletproof security and backups, and the ability to scale automatically during traffic spikes."
+    answer: "Clients can expect deployments with no downtime, infrastructure costs brought down through right-sizing and monitoring, and automated backups with a tested disaster recovery plan in place."
   }
 ];
 
@@ -52,7 +51,7 @@ export default function CloudInfrastructurePage() {
     "provider": {
       "@type": "Organization",
       "name": "Esvin Creative",
-      "url": "https://esvincreative.in"
+      "url": "https://www.esvincreative.in"
     },
     "areaServed": {
       "@type": "Country",
@@ -73,13 +72,13 @@ export default function CloudInfrastructurePage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://esvincreative.in"
+        "item": "https://www.esvincreative.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://esvincreative.in/services"
+        "item": "https://www.esvincreative.in/services"
       },
       {
         "@type": "ListItem",
@@ -92,8 +91,8 @@ export default function CloudInfrastructurePage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
@@ -202,10 +201,10 @@ export default function CloudInfrastructurePage() {
       
       <section className="py-24 px-6 md:px-12 bg-white border-y-2 border-dashed border-black">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold font-ultra text-black mb-6">Related Case Studies</h2>
-          <p className="text-xl font-ultra text-black/70 mb-8">Detailed case studies for this service are currently being documented.</p>
-          <Link href="/case-studies" className="inline-block px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform">
-            View All Case Studies
+          <h2 className="text-4xl font-bold font-ultra text-black mb-6">See Our Work</h2>
+          <p className="text-xl font-ultra text-black/70 mb-8">Explore how we've applied our cloud and DevOps expertise for real clients, with more case studies in progress.</p>
+          <Link href="/portfolio" className="inline-block px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform">
+            View Our Portfolio
           </Link>
         </div>
       </section>
@@ -225,8 +224,8 @@ export default function CloudInfrastructurePage() {
             <Link href="/contact" className="px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-pink hover:text-black transition-colors w-full sm:w-auto">
               Schedule a Consultation
             </Link>
-            <Link href="/contact" className="px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform w-full sm:w-auto">
-              Contact Us
+            <Link href="/pricing/calculator" className="px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform w-full sm:w-auto">
+              Get an Instant Estimate
             </Link>
           </div>
           <div className="mt-8">

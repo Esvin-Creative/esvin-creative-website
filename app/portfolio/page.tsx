@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Our Portfolio & Work | Esvin Creative",
   description: "Explore our portfolio of custom software, mobile apps, and digital platforms built for organizations globally.",
   alternates: {
-    canonical: "https://esvincreative.in/portfolio",
+    canonical: "https://www.esvincreative.in/portfolio",
   },
 };
 

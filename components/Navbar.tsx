@@ -64,7 +64,7 @@ export default function Navbar() {
 
         
         <button
-          className="md:hidden text-black p-2 flex items-center justify-center w-10 h-10"
+          className="md:hidden text-black p-2 flex items-center justify-center w-11 h-11"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <Cross1Icon className="w-6 h-6" /> : <HamburgerMenuIcon className="w-6 h-6" />}
@@ -76,13 +76,13 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-white border-b-2 border-dashed border-black py-6 px-6 flex flex-col gap-6 items-center"
+          className="md:hidden absolute top-full left-0 right-0 bg-white border-b-2 border-dashed border-black py-6 px-6 flex flex-col gap-2 items-center"
         >
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-2xl font-bold font-ultra text-black"
+              className="inline-block py-3 text-2xl font-bold font-ultra text-black"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}

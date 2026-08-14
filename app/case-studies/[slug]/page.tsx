@@ -3,9 +3,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SketchHighlight from "@/components/SketchHighlight";
 import Link from "next/link";
-import Script from "next/script";
 
-
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function CaseStudyPage({ params }: { params: { slug: string } }) {
   const isPlaceholder = true;
@@ -23,7 +27,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
       "name": "Esvin Creative",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://esvincreative.in/assets/icons/logo-placeholder.svg"
+        "url": "https://www.esvincreative.in/assets/icons/logo-placeholder.svg"
       }
     },
     "datePublished": "2024-01-01T08:00:00+08:00",
@@ -33,7 +37,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <Script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script id="article-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 
       <section className="pt-40 pb-20 px-6 md:px-12 border-b-2 border-dashed border-black bg-highlight-pink/10">
         <div className="max-w-4xl mx-auto">

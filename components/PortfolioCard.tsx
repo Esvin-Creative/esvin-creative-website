@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Script from "next/script";
 import { ArrowRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export interface PortfolioItem {
@@ -40,7 +39,7 @@ export default function PortfolioCard({ item, index }: PortfolioCardProps) {
 
   return (
     <div className="bg-white p-8 md:p-12 sketch-border sketch-shadow relative group">
-      <Script id={`portfolio-schema-${index}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script id={`portfolio-schema-${index}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       
       <div className={`absolute top-0 right-0 w-24 h-24 ${color} sketch-border-b sketch-border-l z-0 opacity-50 group-hover:opacity-100 transition-opacity`} />
       

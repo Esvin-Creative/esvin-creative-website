@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Company | Esvin Creative",
   description: "Esvin Creative is a technology consulting and software engineering firm based in Hyderabad, India. Discover our mission and corporate information.",
   alternates: {
-    canonical: "https://esvincreative.in/company",
+    canonical: "https://www.esvincreative.in/company",
   },
 };
 

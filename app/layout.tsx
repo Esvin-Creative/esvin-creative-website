@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://esvincreative.in'),
+  metadataBase: new URL('https://www.esvincreative.in'),
   title: "Esvin Creative | Software & Cloud Engineering",
   description: "End-to-end technology partner for custom software, mobile apps, and cloud infrastructure. We engineer digital scale.",
   keywords: ["software development company hyderabad", "mobile app development company hyderabad", "cloud infrastructure services", "technology consulting", "digital transformation", "custom software development", "web development company india"],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Esvin Creative | Software & Cloud Engineering",
     description: "End-to-end technology partner for custom software, mobile apps, and cloud infrastructure. We engineer digital scale.",
-    url: "https://esvincreative.in",
+    url: "https://www.esvincreative.in",
     siteName: "Esvin Creative",
     images: [
       {
@@ -65,9 +65,10 @@ export default function RootLayout({
   const orgSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://www.esvincreative.in/#organization",
     "name": "Esvin Creative",
-    "url": "https://esvincreative.in",
-    "logo": "https://esvincreative.in/logo.png",
+    "url": "https://www.esvincreative.in",
+    "logo": "https://www.esvincreative.in/logo.png",
     "description": "Technology consulting, software development, mobile app development, and cloud infrastructure services.",
     "foundingLocation": {
       "@type": "Place",
@@ -79,7 +80,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Esvin Creative",
-    "url": "https://esvincreative.in"
+    "url": "https://www.esvincreative.in"
   };
 
   return (
@@ -101,8 +102,8 @@ export default function RootLayout({
         </Script>
 
         
-        <Script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-        <Script id="website-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
+        <script id="org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+        <script id="website-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       </body>
     </html>
   );

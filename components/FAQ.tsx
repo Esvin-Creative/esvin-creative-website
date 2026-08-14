@@ -1,9 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
-import Script from "next/script";
 
 const defaultFaqs = [
   { question: "How much does custom software development cost?", answer: "Custom software development costs vary widely based on the complexity of the project, the technologies used, and the scope of work. At Esvin Creative, we work with our clients to define clear requirements and provide transparent, phased pricing models that align with business value." },
@@ -55,42 +53,48 @@ export default function FAQ({ faqs = defaultFaqs, title = "Frequently Asked Ques
 
   return (
     <section className="py-24 bg-white relative">
-      <Script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script id="faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-12 text-center">
           {title}
         </h2>
         
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <div key={index} className="bg-white sketch-border sketch-shadow overflow-hidden">
-              <button
-                className="w-full px-6 py-4 flex justify-between items-center text-left focus:outline-none"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <span className="text-xl font-bold font-ultra text-black">{faq.question}</span>
-                <ChevronDownIcon
-                  className={`w-6 h-6 text-black transition-transform duration-300 ${
-                    openIndex === index ? "rotate-180" : ""
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div key={index} className="bg-white sketch-border sketch-shadow overflow-hidden">
+                <button
+                  id={`faq-question-${index}`}
+                  className="w-full px-6 py-4 flex justify-between items-center text-left focus:outline-none"
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
+                >
+                  <span className="text-xl font-bold font-ultra text-black">{faq.question}</span>
+                  <ChevronDownIcon
+                    className={`w-6 h-6 text-black transition-transform duration-300 shrink-0 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                  className={`grid transition-all duration-300 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   }`}
-                />
-              </button>
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
+                >
+                  <div className="overflow-hidden">
                     <div className="px-6 pb-6 pt-2 text-lg text-black/80 font-ultra leading-relaxed border-t-2 border-dashed border-black/10 mt-2">
                       {faq.answer}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

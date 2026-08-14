@@ -8,7 +8,7 @@ import TypingEffect from "./TypingEffect";
 
 export default function Hero() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-subtle-grid min-h-[90vh] flex items-center">
+    <section className="relative pt-24 pb-12 md:pt-48 md:pb-32 overflow-hidden bg-subtle-grid md:min-h-[90vh] flex items-center">
       <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-white pointer-events-none" />
       
       <div className="w-full max-w-7xl mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center text-center">
@@ -23,7 +23,7 @@ export default function Hero() {
           <Image src="/assets/icons/bars-graphic-up-hand-drawn-symbol-svgrepo-com.svg" alt="Hand drawn upward bars graphic representing growth" width={64} height={64} className="absolute -right-16 -top-10 opacity-70" />
         </motion.div>
 
-        <h1 className="relative text-5xl md:text-7xl font-bold tracking-tight max-w-5xl leading-tight">
+        <h1 className="relative text-4xl md:text-7xl font-bold tracking-tight max-w-5xl leading-tight">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="Hand drawn sparkles graphic representing creativity" width={80} height={80} className="absolute -left-12 -top-12 opacity-80 animate-wobble" priority />
           <motion.span 
             initial={{ opacity: 1 }} 
@@ -81,7 +81,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.8 }}
-          className="mt-12 flex flex-col sm:flex-row gap-6 w-full sm:w-auto relative"
+          className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-6 w-full sm:w-auto relative"
         >
           <Image src="/assets/icons/rotated-right-arrow-svgrepo-com.svg" alt="Hand drawn right arrow pointing to schedule consultation" width={96} height={96} className="absolute -left-20 -top-16 hidden md:block opacity-60" />
           <Link

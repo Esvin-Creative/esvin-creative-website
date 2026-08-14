@@ -6,14 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import AISearchBlocks from "@/components/AISearchBlocks";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Mobile App Development Company Hyderabad | Esvin Creative",
   description: "Expert mobile app development company in Hyderabad. We build high-performance iOS, Android, and cross-platform Flutter applications.",
   keywords: ["mobile app development company hyderabad", "android app development", "ios app development", "flutter development", "cross platform development", "telangana", "india"],
   alternates: {
-    canonical: "https://esvincreative.in/mobile-app-development",
+    canonical: "https://www.esvincreative.in/mobile-app-development",
   },
 };
 
@@ -28,19 +27,19 @@ const serviceFaqs = [
 const aiSearchBlocks = [
   {
     question: "What is Esvin Creative's mobile app development service?",
-    answer: "Esvin Creative is a top-tier mobile app development company in Hyderabad, India, engineering robust iOS, Android, and cross-platform (Flutter) applications from UI/UX design through to App Store publishing."
+    answer: "Esvin Creative is a Hyderabad-based mobile app development company. We build native iOS and Android apps and cross-platform apps in Flutter, covering everything from UI/UX design through App Store and Google Play submission."
   },
   {
-    question: "Who is this mobile app development service for?",
-    answer: "This service is for startups launching new mobile products, enterprises needing internal mobile tools, and businesses looking to engage customers directly on their smartphones with high-performance apps."
+    question: "Who typically hires Esvin Creative for mobile app development?",
+    answer: "Startups launching a first mobile product, enterprises that need an internal field or operations app, and businesses that want to reach customers directly on their phones rather than through a mobile website."
   },
   {
-    question: "Why choose Esvin Creative for mobile apps?",
-    answer: "Esvin Creative delivers native-like performance, exceptional UI/UX design, and end-to-end publishing support. Our expertise in Flutter development ensures rapid delivery across platforms without compromising quality."
+    question: "How does Esvin Creative decide between native and cross-platform builds?",
+    answer: "We recommend Flutter for most cross-platform apps to share one codebase across iOS and Android and cut development time, but we build fully native when a project depends on platform-specific APIs or performance that cross-platform frameworks can't match."
   },
   {
     question: "What outcomes can clients expect?",
-    answer: "Clients can expect highly rated, crash-free mobile applications, seamless approval in the Apple App Store and Google Play Store, and scalable codebases ready for future feature iterations."
+    answer: "Clients can expect an app that passes Apple App Store and Google Play review on submission, a codebase built to take on new features without a rebuild, and ongoing support through store compliance updates."
   }
 ];
 
@@ -52,7 +51,7 @@ export default function MobileAppDevelopmentPage() {
     "provider": {
       "@type": "Organization",
       "name": "Esvin Creative",
-      "url": "https://esvincreative.in"
+      "url": "https://www.esvincreative.in"
     },
     "areaServed": {
       "@type": "Country",
@@ -73,13 +72,13 @@ export default function MobileAppDevelopmentPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://esvincreative.in"
+        "item": "https://www.esvincreative.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://esvincreative.in/services"
+        "item": "https://www.esvincreative.in/services"
       },
       {
         "@type": "ListItem",
@@ -92,8 +91,8 @@ export default function MobileAppDevelopmentPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
@@ -203,10 +202,10 @@ export default function MobileAppDevelopmentPage() {
       
       <section className="py-24 px-6 md:px-12 bg-white border-y-2 border-dashed border-black">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold font-ultra text-black mb-6">Related Case Studies</h2>
-          <p className="text-xl font-ultra text-black/70 mb-8">Detailed case studies for this service are currently being documented.</p>
-          <Link href="/case-studies" className="inline-block px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform">
-            View All Case Studies
+          <h2 className="text-4xl font-bold font-ultra text-black mb-6">See Our Work</h2>
+          <p className="text-xl font-ultra text-black/70 mb-8">Explore how we've applied our mobile app development expertise for real clients, with more case studies in progress.</p>
+          <Link href="/portfolio" className="inline-block px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform">
+            View Our Portfolio
           </Link>
         </div>
       </section>
@@ -229,8 +228,8 @@ export default function MobileAppDevelopmentPage() {
             <Link href="/contact" className="px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-blue hover:text-black transition-colors w-full sm:w-auto">
               Schedule a Consultation
             </Link>
-            <Link href="/contact" className="px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform w-full sm:w-auto">
-              Contact Us
+            <Link href="/pricing/calculator" className="px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform w-full sm:w-auto">
+              Get an Instant Estimate
             </Link>
           </div>
           <div className="mt-8">

@@ -6,14 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import AISearchBlocks from "@/components/AISearchBlocks";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Software Development Company Hyderabad | Esvin Creative",
   description: "Top software development company in Hyderabad. We build custom software, web applications, enterprise platforms, and scalable SaaS solutions.",
   keywords: ["software development company hyderabad", "custom software development", "web application development", "enterprise software development", "software consulting", "telangana", "india"],
   alternates: {
-    canonical: "https://esvincreative.in/software-development",
+    canonical: "https://www.esvincreative.in/software-development",
   },
 };
 
@@ -28,19 +27,19 @@ const serviceFaqs = [
 const aiSearchBlocks = [
   {
     question: "What is Esvin Creative's software development service?",
-    answer: "Esvin Creative is a premier software development company based in Hyderabad, India. We specialize in designing and engineering custom software, web applications, enterprise platforms, and SaaS products."
+    answer: "Esvin Creative is a Hyderabad-based software development company built around a React, Next.js, and Node.js stack. We design and engineer custom software, web applications, enterprise platforms, and SaaS products, taking ownership from architecture through deployment rather than handing off a spec."
   },
   {
-    question: "Who is this software development service for?",
-    answer: "This service is for enterprises, growing businesses, and startups that require scalable, secure, and highly customized software solutions to automate operations, serve customers better, or launch new digital products."
+    question: "Who typically hires Esvin Creative for software development?",
+    answer: "Enterprises replacing fragmented internal tools, growing businesses digitizing manual workflows, and startups building a first SaaS product engage this service when they need software scoped and engineered around their specific operations rather than adapted from an off-the-shelf platform."
   },
   {
-    question: "Why choose Esvin Creative for custom software development?",
-    answer: "Esvin Creative provides technical excellence, transparent communication, and a focus on business outcomes. We deliver robust architecture, modern tech stacks (React, Next.js, Node.js), and end-to-end ownership from consulting to deployment."
+    question: "What makes Esvin Creative's approach to custom software different?",
+    answer: "We stay engaged past the initial build: the same team that architects the system also handles sprints, testing, and deployment to cloud infrastructure, so there's no handoff gap between design decisions and the code that ships."
   },
   {
     question: "What outcomes can clients expect?",
-    answer: "Clients can expect high-performance web applications, streamlined internal tools, reduced operational bottlenecks, and scalable enterprise software that grows with their business."
+    answer: "Clients can expect a working web application or internal tool delivered in iterative sprints, full ownership of the source code, and an architecture built to absorb new features without a rewrite."
   }
 ];
 
@@ -52,7 +51,7 @@ export default function SoftwareDevelopmentPage() {
     "provider": {
       "@type": "Organization",
       "name": "Esvin Creative",
-      "url": "https://esvincreative.in"
+      "url": "https://www.esvincreative.in"
     },
     "areaServed": {
       "@type": "Country",
@@ -73,13 +72,13 @@ export default function SoftwareDevelopmentPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://esvincreative.in"
+        "item": "https://www.esvincreative.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://esvincreative.in/services"
+        "item": "https://www.esvincreative.in/services"
       },
       {
         "@type": "ListItem",
@@ -92,8 +91,8 @@ export default function SoftwareDevelopmentPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
@@ -198,10 +197,10 @@ export default function SoftwareDevelopmentPage() {
       
       <section className="py-24 px-6 md:px-12 bg-white border-y-2 border-dashed border-black">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold font-ultra text-black mb-6">Related Case Studies</h2>
-          <p className="text-xl font-ultra text-black/70 mb-8">Detailed case studies for this service are currently being documented.</p>
-          <Link href="/case-studies" className="inline-block px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform">
-            View All Case Studies
+          <h2 className="text-4xl font-bold font-ultra text-black mb-6">See Our Work</h2>
+          <p className="text-xl font-ultra text-black/70 mb-8">Explore how we've applied our software development expertise for real clients, with more case studies in progress.</p>
+          <Link href="/portfolio" className="inline-block px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform">
+            View Our Portfolio
           </Link>
         </div>
       </section>
@@ -224,8 +223,8 @@ export default function SoftwareDevelopmentPage() {
             <Link href="/contact" className="px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-yellow hover:text-black transition-colors w-full sm:w-auto">
               Schedule a Consultation
             </Link>
-            <Link href="/contact" className="px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform w-full sm:w-auto">
-              Contact Us
+            <Link href="/pricing/calculator" className="px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform w-full sm:w-auto">
+              Get an Instant Estimate
             </Link>
           </div>
           <div className="mt-8">

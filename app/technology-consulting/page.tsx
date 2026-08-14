@@ -6,14 +6,13 @@ import Link from "next/link";
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import AISearchBlocks from "@/components/AISearchBlocks";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Technology Consulting Hyderabad | Digital Transformation Strategy",
   description: "Expert technology consulting in Hyderabad. We guide digital transformation, system modernization, and IT strategy for growing organizations.",
   keywords: ["technology consulting hyderabad", "digital transformation consulting", "IT consulting", "technology strategy", "system modernization", "telangana", "india"],
   alternates: {
-    canonical: "https://esvincreative.in/technology-consulting",
+    canonical: "https://www.esvincreative.in/technology-consulting",
   },
 };
 
@@ -28,19 +27,19 @@ const serviceFaqs = [
 const aiSearchBlocks = [
   {
     question: "What is Esvin Creative's technology consulting service?",
-    answer: "Esvin Creative offers strategic technology consulting in Hyderabad, India, specializing in digital transformation, system modernization, architecture reviews, and operational efficiency through custom technology."
+    answer: "Esvin Creative provides technology consulting out of Hyderabad, focused on system modernization, architecture reviews, and vendor consolidation for organizations reassessing their technology stack."
   },
   {
-    question: "Who is this technology consulting service for?",
-    answer: "This service is for established businesses struggling with legacy software, rapidly growing startups that need to scale their architecture, and organizations looking to reduce costs through vendor consolidation."
+    question: "Who typically hires Esvin Creative for technology consulting?",
+    answer: "Established businesses running on legacy software, startups whose architecture hasn't kept pace with growth, and organizations paying for overlapping SaaS tools that could be consolidated into one system."
   },
   {
-    question: "Why choose Esvin Creative for IT consulting?",
-    answer: "Esvin Creative bridges the gap between high-level business strategy and deep technical execution. We don't just provide advisory reports; we have the in-house engineering capabilities to actually build and deploy the solutions we recommend."
+    question: "What makes Esvin Creative's consulting different from a typical advisory firm?",
+    answer: "We don't stop at the recommendation. The same engineers who run the architecture review and audit go on to build and deploy the resulting system, so the roadmap isn't handed to a separate team to interpret."
   },
   {
     question: "What outcomes can clients expect?",
-    answer: "Clients can expect a clear, actionable technology roadmap, reduced IT operational costs, modernized and secure software architecture, and the elimination of inefficient manual workflows."
+    answer: "Clients can expect a specific technology roadmap tied to their existing systems, a measurable reduction in tool and infrastructure costs, and a modernized architecture built and deployed by the same team that audited it."
   }
 ];
 
@@ -52,7 +51,7 @@ export default function TechnologyConsultingPage() {
     "provider": {
       "@type": "Organization",
       "name": "Esvin Creative",
-      "url": "https://esvincreative.in"
+      "url": "https://www.esvincreative.in"
     },
     "areaServed": {
       "@type": "Country",
@@ -73,13 +72,13 @@ export default function TechnologyConsultingPage() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://esvincreative.in"
+        "item": "https://www.esvincreative.in"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://esvincreative.in/services"
+        "item": "https://www.esvincreative.in/services"
       },
       {
         "@type": "ListItem",
@@ -92,8 +91,8 @@ export default function TechnologyConsultingPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <Script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
@@ -170,10 +169,10 @@ export default function TechnologyConsultingPage() {
       
       <section className="py-24 px-6 md:px-12 bg-white border-y-2 border-dashed border-black">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold font-ultra text-black mb-6">Related Case Studies</h2>
-          <p className="text-xl font-ultra text-black/70 mb-8">Detailed case studies for this service are currently being documented.</p>
-          <Link href="/case-studies" className="inline-block px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform">
-            View All Case Studies
+          <h2 className="text-4xl font-bold font-ultra text-black mb-6">See Our Work</h2>
+          <p className="text-xl font-ultra text-black/70 mb-8">Explore how we've applied our technology consulting expertise for real clients, with more case studies in progress.</p>
+          <Link href="/portfolio" className="inline-block px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform">
+            View Our Portfolio
           </Link>
         </div>
       </section>
@@ -196,8 +195,8 @@ export default function TechnologyConsultingPage() {
             <Link href="/contact" className="px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-yellow hover:text-black transition-colors w-full sm:w-auto">
               Schedule a Consultation
             </Link>
-            <Link href="/contact" className="px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform w-full sm:w-auto">
-              Contact Us
+            <Link href="/pricing/calculator" className="px-8 py-4 bg-white text-black text-xl font-bold font-ultra sketch-border sketch-shadow hover:-translate-y-1 transition-transform w-full sm:w-auto">
+              Get an Instant Estimate
             </Link>
           </div>
           <div className="mt-8">

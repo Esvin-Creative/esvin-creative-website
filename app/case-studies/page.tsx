@@ -10,7 +10,11 @@ export const metadata: Metadata = {
   title: "Case Studies | Esvin Creative",
   description: "Read our case studies to see how we solve complex technical challenges and deliver measurable business results.",
   alternates: {
-    canonical: "https://esvincreative.in/case-studies",
+    canonical: "https://www.esvincreative.in/case-studies",
+  },
+  robots: {
+    index: false,
+    follow: true,
   },
 };
 
@@ -45,9 +49,12 @@ export default function CaseStudiesHubPage() {
             <div className="bg-white p-12 text-center sketch-border sketch-shadow max-w-3xl mx-auto">
               <div className="text-6xl mb-6">📝</div>
               <h3 className="text-3xl font-bold font-ultra text-black mb-4">Case Studies Coming Soon</h3>
-              <p className="text-lg font-ultra text-black/60">
+              <p className="text-lg font-ultra text-black/60 mb-8">
                 We are currently documenting our recent projects. Check back soon for detailed breakdowns of our engineering process and results.
               </p>
+              <Link href="/portfolio" className="inline-block px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-yellow hover:text-black transition-colors">
+                View Our Portfolio Instead
+              </Link>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -1,14 +1,12 @@
-import Script from "next/script";
-
 export default function LocalBusinessInfo() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "Organization",
     "name": "Esvin Creative",
-    "image": "https://esvincreative.in/assets/icons/logo-placeholder.svg", 
-    "@id": "https://esvincreative.in",
-    "url": "https://esvincreative.in",
-    "telephone": "", 
+    "image": "https://www.esvincreative.in/assets/icons/logo-placeholder.svg",
+    "@id": "https://www.esvincreative.in/#organization",
+    "url": "https://www.esvincreative.in",
+    "telephone": "",
     "email": "hello@esvincreative.in",
     "address": {
       "@type": "PostalAddress",
@@ -32,7 +30,7 @@ export default function LocalBusinessInfo() {
 
   return (
     <div className="bg-black text-white p-8 sketch-border">
-      <Script id="local-business-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script id="local-business-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       
       <h3 className="text-2xl font-bold font-ultra mb-6">Business Information</h3>
       

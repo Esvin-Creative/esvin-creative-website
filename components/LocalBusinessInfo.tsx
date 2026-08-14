@@ -3,10 +3,9 @@ export default function LocalBusinessInfo() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Esvin Creative",
-    "image": "https://www.esvincreative.in/assets/icons/logo-placeholder.svg",
+    "image": "https://www.esvincreative.in/logos/icon.png",
     "@id": "https://www.esvincreative.in/#organization",
     "url": "https://www.esvincreative.in",
-    "telephone": "",
     "email": "hello@esvincreative.in",
     "address": {
       "@type": "PostalAddress",

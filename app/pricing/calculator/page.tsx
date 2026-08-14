@@ -10,5 +10,20 @@ export const metadata: Metadata = {
 };
 
 export default function CalculatorPage() {
-  return <CalculatorPageClient />;
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.esvincreative.in" },
+      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": "https://www.esvincreative.in/pricing" },
+      { "@type": "ListItem", "position": 3, "name": "Calculator" }
+    ]
+  };
+
+  return (
+    <>
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <CalculatorPageClient />
+    </>
+  );
 }

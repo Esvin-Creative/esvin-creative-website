@@ -68,7 +68,7 @@ export default function RootLayout({
     "@id": "https://www.esvincreative.in/#organization",
     "name": "Esvin Creative",
     "url": "https://www.esvincreative.in",
-    "logo": "https://www.esvincreative.in/logo.png",
+    "logo": "https://www.esvincreative.in/logos/icon.png",
     "description": "Technology consulting, software development, mobile app development, and cloud infrastructure services.",
     "foundingLocation": {
       "@type": "Place",

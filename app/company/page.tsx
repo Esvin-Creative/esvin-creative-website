@@ -16,11 +16,21 @@ export const metadata: Metadata = {
 };
 
 export default function CompanyPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.esvincreative.in" },
+      { "@type": "ListItem", "position": 2, "name": "Company" }
+    ]
+  };
+
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
+      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      
+
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
         <div className="absolute left-10 top-32 opacity-30">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />

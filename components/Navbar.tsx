@@ -64,7 +64,7 @@ export default function Navbar() {
 
         
         <button
-          className="md:hidden text-black p-2 flex items-center justify-center w-11 h-11"
+          className="md:hidden text-black p-2 flex items-center justify-center w-12 h-12"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <Cross1Icon className="w-6 h-6" /> : <HamburgerMenuIcon className="w-6 h-6" />}

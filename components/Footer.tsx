@@ -33,19 +33,19 @@ export default function Footer() {
             <div>
               <h4 className="font-bold text-black mb-6 text-2xl font-ultra">Links</h4>
               <ul className="space-y-4">
-                <li><Link href="/about" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">About Us</Link></li>
-                <li><Link href="/contact" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">Contact</Link></li>
-                <li><Link href="/services" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">All Services</Link></li>
+                <li><Link href="/about" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">About Us</Link></li>
+                <li><Link href="/contact" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Contact</Link></li>
+                <li><Link href="/services" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">All Services</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-bold text-black mb-6 text-2xl font-ultra">Services</h4>
               <ul className="space-y-4">
-                <li><Link href="/software-development" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">Software Development</Link></li>
-                <li><Link href="/mobile-app-development" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">Mobile App Development</Link></li>
-                <li><Link href="/cloud-infrastructure" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">Cloud Infrastructure</Link></li>
-                <li><Link href="/technology-consulting" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">Technology Consulting</Link></li>
+                <li><Link href="/software-development" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Software Development</Link></li>
+                <li><Link href="/mobile-app-development" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Mobile App Development</Link></li>
+                <li><Link href="/cloud-infrastructure" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Cloud Infrastructure</Link></li>
+                <li><Link href="/technology-consulting" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Technology Consulting</Link></li>
               </ul>
             </div>
             
@@ -53,22 +53,22 @@ export default function Footer() {
               <h4 className="font-bold text-black mb-6 text-2xl font-ultra">Contact</h4>
               <ul className="space-y-4">
                 <li>
-                  <a href="mailto:hello@esvincreative.in" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">
+                  <a href="mailto:hello@esvincreative.in" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">
                     hello@esvincreative.in
                   </a>
                 </li>
                 <li>
-                  <a href="https://esvincreative.in" target="_blank" rel="noopener noreferrer" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">
+                  <a href="https://esvincreative.in" target="_blank" rel="noopener noreferrer" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">
                     esvincreative.in
                   </a>
                 </li>
                 <li>
-                  <a href="https://instagram.com/esvincreative.in" target="_blank" rel="noopener noreferrer" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">
+                  <a href="https://instagram.com/esvincreative.in" target="_blank" rel="noopener noreferrer" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/Esvin-Creative" target="_blank" rel="noopener noreferrer" className="inline-block -my-2 py-2 text-lg font-ultra text-black/70 hover:text-black transition-colors">
+                  <a href="https://github.com/Esvin-Creative" target="_blank" rel="noopener noreferrer" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">
                     GitHub
                   </a>
                 </li>

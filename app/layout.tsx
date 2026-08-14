@@ -73,7 +73,12 @@ export default function RootLayout({
     "foundingLocation": {
       "@type": "Place",
       "name": "Hyderabad, Telangana, India"
-    }
+    },
+    "sameAs": [
+      "https://github.com/Esvin-Creative",
+      "https://www.linkedin.com/company/esvin-creative",
+      "https://instagram.com/esvincreative.in"
+    ]
   };
 
   const webSiteSchema = {

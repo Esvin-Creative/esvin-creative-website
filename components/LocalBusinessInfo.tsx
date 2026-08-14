@@ -23,7 +23,9 @@ export default function LocalBusinessInfo() {
       "name": "Hyderabad"
     },
     "sameAs": [
-      "https://github.com/Esvin-Creative"
+      "https://github.com/Esvin-Creative",
+      "https://www.linkedin.com/company/esvin-creative",
+      "https://instagram.com/esvincreative.in"
     ]
   };
 

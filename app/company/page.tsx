@@ -92,12 +92,12 @@ export default function CompanyPage() {
                   <GitHubLogoIcon className="w-6 h-6" /> GitHub
                 </a>
                 
-                <div className="flex items-center gap-3 px-6 py-4 bg-gray-100 text-black/50 font-ultra sketch-border cursor-not-allowed" title="Coming Soon">
-                  <LinkedInLogoIcon className="w-6 h-6" /> LinkedIn (Soon)
-                </div>
-                <div className="flex items-center gap-3 px-6 py-4 bg-gray-100 text-black/50 font-ultra sketch-border cursor-not-allowed" title="Coming Soon">
-                  <InstagramLogoIcon className="w-6 h-6" /> Instagram (Soon)
-                </div>
+                <a href="https://www.linkedin.com/company/esvin-creative" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-4 bg-black text-white font-ultra sketch-border hover:-translate-y-1 transition-transform">
+                  <LinkedInLogoIcon className="w-6 h-6" /> LinkedIn
+                </a>
+                <a href="https://instagram.com/esvincreative.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-6 py-4 bg-black text-white font-ultra sketch-border hover:-translate-y-1 transition-transform">
+                  <InstagramLogoIcon className="w-6 h-6" /> Instagram
+                </a>
               </div>
             </div>
           </div>

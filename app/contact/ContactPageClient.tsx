@@ -130,7 +130,7 @@ export default function ContactPageClient() {
             <div className="space-y-4">
               <h3 className="font-bold text-2xl text-black">Connect With Us</h3>
               <div className="flex gap-4">
-                <a href="#" title="Coming soon" className="p-4 bg-white sketch-border sketch-shadow hover:-translate-y-1 hover:bg-highlight-blue transition-all group flex items-center justify-center w-14 h-14 cursor-not-allowed">
+                <a href="https://www.linkedin.com/company/esvin-creative" target="_blank" rel="noopener noreferrer" className="p-4 bg-white sketch-border sketch-shadow hover:-translate-y-1 hover:bg-highlight-blue transition-all group flex items-center justify-center w-14 h-14">
                   <LinkedInLogoIcon className="w-6 h-6 text-black group-hover:scale-110 transition-transform" />
                 </a>
                 <a href="https://github.com/Esvin-Creative" target="_blank" rel="noopener noreferrer" className="p-4 bg-white sketch-border sketch-shadow hover:-translate-y-1 hover:bg-highlight-yellow transition-all group flex items-center justify-center w-14 h-14">

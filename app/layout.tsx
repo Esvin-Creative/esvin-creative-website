@@ -79,7 +79,9 @@ export default function RootLayout({
       "https://www.linkedin.com/company/esvin-creative",
       "https://instagram.com/esvincreative.in",
       "https://www.goodfirms.co/company/esvin-creative",
-      "https://www.sortlist.com/agency/esvin-creative"
+      "https://www.sortlist.com/agency/esvin-creative",
+      "https://www.f6s.com/esvin-creative",
+      "https://www.crunchbase.com/organization/esvin-creative-eaf3"
     ]
   };
 

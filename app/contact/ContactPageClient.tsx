@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
 import TrustSignals from "@/components/TrustSignals";
 import SketchHighlight from "@/components/SketchHighlight";
+import { redirect } from "next/navigation";
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -48,9 +49,13 @@ export default function ContactPageClient() {
         mode: "no-cors",
         body: body,
       });
-
+      
       setStatus("success");
-      setFormData({ name: "", company: "", email: "", project: "", budget: "" });
+
+      setTimeout(() => {
+        redirect("/contact-confirmed");
+      }, 500);
+
     } catch (error) {
       console.error(error);
       setStatus("error");
@@ -62,7 +67,6 @@ export default function ContactPageClient() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-
 
       <section className="relative pt-40 pb-16 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
         <Image src="/assets/icons/speech-bubble-drawn.svg" alt="" width={100} height={100} className="absolute top-20 right-10 md:right-32 opacity-60 animate-wobble" />
@@ -81,14 +85,12 @@ export default function ContactPageClient() {
         </motion.div>
       </section>
 
-
       <section className="relative py-16 bg-white border-t-2 border-dashed border-black/10">
         <div className="absolute left-5 top-20 opacity-30">
           <Image src="/assets/icons/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" alt="" width={100} height={100} />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-5 gap-16 relative z-10">
-
 
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -143,7 +145,6 @@ export default function ContactPageClient() {
             </div>
           </motion.div>
 
-
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -152,24 +153,7 @@ export default function ContactPageClient() {
           >
             <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={60} height={60} className="absolute -top-8 -right-8 opacity-40 animate-wobble z-20" />
             <div className="bg-white sketch-border sketch-shadow p-8 md:p-12 h-full relative z-10">
-              {status === "success" ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="text-center py-20"
-                >
-                  <h3 className="text-3xl font-bold font-ultra text-black mb-4">Request Received!</h3>
-                  <p className="text-xl font-ultra text-black/80">
-                    Thank you for scheduling a consultation. Our engineering team will review your requirements and reach out shortly.
-                  </p>
-                  <button
-                    onClick={() => setStatus("idle")}
-                    className="mt-8 px-8 py-3 bg-white sketch-border sketch-shadow text-black font-bold text-xl hover:bg-highlight-yellow transition-colors"
-                  >
-                    Submit Another Request
-                  </button>
-                </motion.div>
-              ) : (
+              
                 <form className="space-y-8" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-3">
@@ -249,14 +233,13 @@ export default function ContactPageClient() {
 
                   <button
                     type="submit"
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || status === "success"}
                     className="w-full flex items-center justify-center gap-2 py-5 bg-black text-white font-bold text-2xl hover:bg-highlight-yellow hover:text-black transition-colors sketch-border sketch-shadow disabled:opacity-50 disabled:cursor-not-allowed group mt-8"
                   >
-                    {isSubmitting ? "Submitting..." : "Schedule a Consultation"}
-                    {!isSubmitting && <PaperPlaneIcon className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+                    {isSubmitting ? "Submitting..." : status === "success" ? "Request Received. Redirecting..." : "Schedule a Consultation"}
+                    {status === "success" && <PaperPlaneIcon className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                   </button>
                 </form>
-              )}
             </div>
           </motion.div>
         </div>

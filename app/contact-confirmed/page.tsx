@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import ContactConfirmedPageClient from "./ContactConfirmedPageClient";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Thank You | Esvin Creative",
   description: "Thank you for contacting Esvin Creative's engineering team. We will get back to you soon.",
   alternates: {
     canonical: "https://www.esvincreative.in/contact-confirmed",
+  },
+ 
+ 
+ 
+  robots: {
+    index: false,
+    follow: true,
   },
 };
 
@@ -21,7 +29,7 @@ export default function ContactConfirmedPage() {
 
   return (
     <>
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
       <ContactConfirmedPageClient />
     </>
   );

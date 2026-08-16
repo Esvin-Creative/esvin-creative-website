@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import SketchHighlight from "@/components/SketchHighlight";
 import PortfolioCard, { PortfolioItem } from "@/components/PortfolioCard";
 import Image from "next/image";
+import JsonLd from "@/components/JsonLd";
+import { caseStudies } from "@/lib/case-studies";
 
 export const metadata: Metadata = {
   title: "Our Portfolio & Work | Esvin Creative",
@@ -13,21 +15,18 @@ export const metadata: Metadata = {
   },
 };
 
-const portfolioItems: PortfolioItem[] = [
-  {
-    name: "Sreyas Institute of Engineering and Technology",
-    client: "Sreyas Institute of Engineering and Technology",
-    category: "Educational Institution Website",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
-    summary: "Complete digital presence overhaul for a leading engineering college. We architected and developed a fast, accessible, and scalable web platform to serve prospective students, current faculty, and administrative staff.",
-    outcomes: [
-      "Improved page load speeds",
-      "Increased mobile engagement",
-      "Streamlined admissions inquiry pipeline"
-    ],
-    projectUrl: "https://sreyas.ac.in",
-  }
-];
+
+
+const portfolioItems: PortfolioItem[] = caseStudies.map((study) => ({
+  name: study.title,
+  client: study.client,
+  category: study.category,
+  technologies: study.technologies,
+  summary: study.summary,
+  outcomes: study.outcomes,
+  projectUrl: study.projectUrl,
+  slug: study.slug,
+}));
 
 export default function PortfolioPage() {
   const breadcrumbSchema = {
@@ -42,7 +41,7 @@ export default function PortfolioPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
         <div className="absolute left-10 top-32 opacity-30">

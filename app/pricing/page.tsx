@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PricingPageClient from "./PricingPageClient";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Pricing & Packages | Esvin Creative",
@@ -19,9 +20,73 @@ export default function PricingPage() {
     ]
   };
 
+ 
+ 
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Esvin Creative Project Packages",
+    "provider": { "@id": "https://www.esvincreative.in/#organization" },
+    "areaServed": { "@type": "Country", "name": "India" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Project Packages",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Launch",
+          "description": "Best for: Startups, small businesses, local organizations.",
+          "priceCurrency": "INR",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 15000,
+            "maxPrice": 25000,
+            "priceCurrency": "INR"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Growth",
+          "description": "Best for: Growing businesses requiring lead generation and stronger online presence.",
+          "priceCurrency": "INR",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 35000,
+            "maxPrice": 75000,
+            "priceCurrency": "INR"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Digital Infrastructure",
+          "description": "Best for: Educational institutions, enterprises, and organizations undergoing digital transformation.",
+          "priceCurrency": "INR",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 75000,
+            "maxPrice": 250000,
+            "priceCurrency": "INR"
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Mobile & Custom Software",
+          "description": "Best for: Organizations requiring custom applications and platforms.",
+          "priceCurrency": "INR",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "minPrice": 150000,
+            "priceCurrency": "INR"
+          }
+        }
+      ]
+    }
+  };
+
   return (
     <>
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
+      <JsonLd id="pricing-schema" data={pricingSchema} />
       <PricingPageClient />
     </>
   );

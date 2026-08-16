@@ -4,7 +4,9 @@ import Footer from "@/components/Footer";
 import SketchHighlight from "@/components/SketchHighlight";
 import Link from "next/link";
 import Image from "next/image";
+import JsonLd from "@/components/JsonLd";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { caseStudies } from "@/lib/case-studies";
 
 export const metadata: Metadata = {
   title: "Case Studies | Esvin Creative",
@@ -12,18 +14,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.esvincreative.in/case-studies",
   },
-  robots: {
-    index: false,
-    follow: true,
-  },
 };
 
 export default function CaseStudiesHubPage() {
- 
-  const caseStudies: any[] = [
-   
-  ];
-
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -36,13 +29,13 @@ export default function CaseStudiesHubPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
         <div className="absolute right-10 top-32 opacity-30">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
         </div>
-        
+
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold font-ultra text-black mb-8 leading-tight">
             Case <SketchHighlight color="pink">Studies</SketchHighlight>

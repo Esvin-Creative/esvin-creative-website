@@ -34,8 +34,10 @@ export default function Footer() {
               <h4 className="font-bold text-black mb-6 text-2xl font-ultra">Links</h4>
               <ul className="space-y-4">
                 <li><Link href="/about" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">About Us</Link></li>
+                <li><Link href="/company" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Company</Link></li>
                 <li><Link href="/contact" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Contact</Link></li>
                 <li><Link href="/services" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">All Services</Link></li>
+                <li><Link href="/portfolio" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Portfolio</Link></li>
               </ul>
             </div>
 
@@ -45,6 +47,7 @@ export default function Footer() {
                 <li><Link href="/software-development" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Software Development</Link></li>
                 <li><Link href="/mobile-app-development" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Mobile App Development</Link></li>
                 <li><Link href="/cloud-infrastructure" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Cloud Infrastructure</Link></li>
+                <li><Link href="/aws-cloud-architecture" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">AWS Cloud Architecture</Link></li>
                 <li><Link href="/technology-consulting" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">Technology Consulting</Link></li>
               </ul>
             </div>
@@ -86,6 +89,10 @@ export default function Footer() {
           <p className="text-lg font-ultra text-black/60">
             © 2026 Esvin Creative. All rights reserved.
           </p>
+          <div className="flex items-center gap-6">
+            <Link href="/privacy" className="text-lg font-ultra text-black/60 hover:text-black transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-lg font-ultra text-black/60 hover:text-black transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>

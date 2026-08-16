@@ -5,6 +5,7 @@ import SketchHighlight from "@/components/SketchHighlight";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Our Services | Esvin Creative",
@@ -54,19 +55,22 @@ export default function ServicesHubPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
         <div className="absolute right-10 top-32 opacity-30">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
         </div>
-        
+
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold font-ultra text-black mb-8 leading-tight">
             Our <SketchHighlight color="pink">Services</SketchHighlight>
           </h1>
           <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed">
             We are a full-stack technology partner. From conceptualizing architecture to developing platforms and managing cloud infrastructure, we deliver end-to-end solutions.
+          </p>
+          <p className="text-xl font-ultra text-black/70 max-w-3xl leading-relaxed mt-6">
+            Every engagement is run by the same team end to end: the engineers who scope the architecture also write the code, configure the cloud infrastructure, and stay on for support after launch. That means no handoff gap between the people who make the technical decisions and the people who ship them — across a Next.js, React, Node.js, and Flutter stack, deployed on AWS, Google Cloud Platform, and Vercel. Each service below covers a distinct part of that work; most engagements combine two or three of them into one project.
           </p>
         </div>
       </section>

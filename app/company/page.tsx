@@ -6,6 +6,7 @@ import LocalBusinessInfo from "@/components/LocalBusinessInfo";
 import Image from "next/image";
 import Link from "next/link";
 import { GitHubLogoIcon, LinkedInLogoIcon, InstagramLogoIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Company | Esvin Creative",
@@ -28,7 +29,7 @@ export default function CompanyPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
 
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">

@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Services", href: "/services" },
-    { name: "Process", href: "/#process" },
+    { name: "Process", href: "/process" },
     { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
@@ -39,6 +39,7 @@ export default function Navbar() {
             alt="Esvin Creative"
             width={160}
             height={160}
+            priority
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-20 md:h-28 w-auto object-contain max-w-none"
           />
         </Link>

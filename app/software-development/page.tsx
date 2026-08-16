@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import AISearchBlocks from "@/components/AISearchBlocks";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Software Development Company Hyderabad | Esvin Creative",
@@ -91,8 +92,8 @@ export default function SoftwareDevelopmentPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="service-schema" data={serviceSchema} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">

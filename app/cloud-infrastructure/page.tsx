@@ -6,11 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import AISearchBlocks from "@/components/AISearchBlocks";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Cloud Consulting Hyderabad | Cloud Infrastructure & DevOps",
-  description: "Premier cloud consulting in Hyderabad. We provide cloud architecture, AWS/GCP migration, DevOps consulting, and infrastructure management.",
-  keywords: ["cloud consulting hyderabad", "cloud migration", "cloud architecture", "devops consulting", "infrastructure management", "telangana", "india"],
+  title: "Cloud Infrastructure Solutions Hyderabad | Cloud Consulting & DevOps",
+  description: "Cloud infrastructure solutions and consulting in Hyderabad: architecture, AWS/GCP migration, DevOps, and ongoing infrastructure management for growing businesses.",
+  keywords: ["infrastructure solution providers in hyderabad", "cloud consulting hyderabad", "cloud migration", "cloud architecture", "devops consulting", "infrastructure management", "telangana", "india"],
   alternates: {
     canonical: "https://www.esvincreative.in/cloud-infrastructure",
   },
@@ -91,8 +92,8 @@ export default function CloudInfrastructurePage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="service-schema" data={serviceSchema} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
@@ -105,7 +106,7 @@ export default function CloudInfrastructurePage() {
             Cloud Infrastructure & <SketchHighlight color="blue">DevOps</SketchHighlight>
           </h1>
           <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-10">
-            Expert cloud consulting in Hyderabad. We design, migrate, and manage scalable cloud architecture so you can focus on building your business.
+            Cloud infrastructure solutions for businesses in Hyderabad. We design, migrate, and manage scalable cloud architecture so you can focus on building your business.
           </p>
           <div className="flex items-center gap-4 text-sm font-ultra text-black/50 mb-10">
             <span>Authored by: Esvin Joshua</span>
@@ -190,6 +191,9 @@ export default function CloudInfrastructurePage() {
                     </span>
                   ))}
                 </div>
+                <p className="text-black/60 font-ultra text-md mt-6">
+                  Already standardized on AWS specifically? See our dedicated <Link href="/aws-cloud-architecture" className="underline hover:text-black">AWS Cloud Architecture &amp; Migration</Link> page.
+                </p>
               </div>
             </div>
           </div>

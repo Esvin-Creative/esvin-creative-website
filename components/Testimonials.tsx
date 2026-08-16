@@ -34,9 +34,27 @@ export default function Testimonials({ testimonials = [] }: TestimonialsProps) {
           <div className="bg-white p-12 text-center sketch-border sketch-shadow max-w-3xl mx-auto">
             <div className="text-6xl mb-6">💬</div>
             <h3 className="text-3xl font-bold font-ultra text-black mb-4">Testimonials coming soon.</h3>
-            <p className="text-lg font-ultra text-black/60">
-              We are currently compiling success stories and feedback from our recent client engagements.
+            <p className="text-lg font-ultra text-black/60 mb-8">
+              We are currently compiling success stories and feedback from our recent client engagements. In the meantime, you can find us listed on:
             </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                { name: "GoodFirms", href: "https://www.goodfirms.co/company/esvin-creative" },
+                { name: "Sortlist", href: "https://www.sortlist.com/agency/esvin-creative" },
+                { name: "Crunchbase", href: "https://www.crunchbase.com/organization/esvin-creative-eaf3" },
+                { name: "F6S", href: "https://www.f6s.com/esvin-creative" },
+              ].map((profile) => (
+                <a
+                  key={profile.name}
+                  href={profile.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 bg-white text-black font-ultra font-bold sketch-border hover:-translate-y-1 hover:bg-highlight-yellow/30 transition-all"
+                >
+                  {profile.name}
+                </a>
+              ))}
+            </div>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -6,6 +6,31 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AISearchBlocks from "@/components/AISearchBlocks";
 import SketchHighlight from "@/components/SketchHighlight";
+import { LinkedInLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
+
+const teamMembers = [
+  {
+    imgSrc: '/assets/team/srinivas.webp',
+    name: "Srinivas Yejarla",
+    title: "Lead Designer",
+    email: "srinivasy@esvincreative.in",
+    linkedin: "https://www.linkedin.com/in/yejarla-srinivas/",
+  },
+  {
+    imgSrc: '/assets/team/venkat.webp',
+    name: "Venkata Vardhan",
+    title: "Core Developer",
+    email: "venkatavardhan@esvincreative.in",
+    linkedin: "https://www.linkedin.com/in/venkata-vardhan-675b66290/",
+  },
+  {
+    imgSrc: '/assets/team/isaac.webp',
+    name: "Isaac Xavier",
+    title: "Core Developer",
+    email: "isaacx@esvincreative.in",
+    linkedin: "https://www.linkedin.com/in/isaac-xavier-9331b12ba/",
+  },
+];
 
 export default function AboutPageClient() {
   return (
@@ -83,13 +108,13 @@ export default function AboutPageClient() {
           >
             <div className="md:col-span-1">
               <div className="w-full aspect-square bg-gray-100 sketch-border sketch-shadow flex flex-col items-center justify-center text-center p-6">
-                <span className="text-gray-400 font-ultra">Esvin joshua</span>
+                <Image src="/assets/team/esvin.webp" alt="Esvin Joshua" width={200} height={200} className="w-full h-full object-cover" />
               </div>
             </div>
             <div className="md:col-span-2 space-y-6">
               <div>
                 <h3 className="text-3xl font-bold text-black">Esvin Joshua</h3>
-                <p className="text-xl font-bold text-black/50 uppercase tracking-wide mt-1">Founder Title</p>
+                <p className="text-xl font-bold text-black/50 uppercase tracking-wide mt-1">Founder</p>
               </div>
 
               <div className="space-y-4">
@@ -102,6 +127,34 @@ export default function AboutPageClient() {
                 <h4 className="text-2xl font-bold text-black">Professional Philosophy</h4>
                 <p className="text-lg font-ultra text-black/80 leading-relaxed">Modern organizations frequently struggle with fragmented technology. When systems are built in silos and maintained by multiple specialized vendors, managing that complexity becomes a full-time job.  Esvin Creative provides end-to-end ownership of your technical infrastructure. We design the architecture, engineer the solution, handle the cloud deployment, and provide long-term operational support. Our focus is on practical solutions and long-term partnerships. We prioritize operational reliability over hype, ensuring the software we build consistently drives real business value.</p>
               </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-20"
+          >
+            <h3 className="text-2xl font-bold text-black mb-10 text-center uppercase tracking-wide">Team</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {teamMembers.map((member) => (
+                <div key={member.name} className="bg-white sketch-border sketch-shadow p-8 text-center flex flex-col items-center">
+                  <div className="w-24 h-24 bg-gray-100 sketch-border-dashed rounded-full flex items-center justify-center text-gray-400 font-ultra mb-6">
+                    <Image src={member.imgSrc} alt={member.name} width={100} height={100} className="w-full h-full object-cover rounded-full" />
+                  </div>
+                  <h4 className="text-2xl font-bold text-black">{member.name}</h4>
+                  <p className="text-md font-bold text-black/50 uppercase tracking-wide mt-1 mb-6">{member.title}</p>
+                  <div className="flex items-center gap-4">
+                    <a href={`mailto:${member.email}`} aria-label={`Email ${member.name}`} className="p-3 bg-white sketch-border hover:bg-highlight-yellow transition-colors flex items-center justify-center">
+                      <EnvelopeClosedIcon className="w-5 h-5 text-black" />
+                    </a>
+                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${member.name} on LinkedIn`} className="p-3 bg-white sketch-border hover:bg-highlight-blue transition-colors flex items-center justify-center">
+                      <LinkedInLogoIcon className="w-5 h-5 text-black" />
+                    </a>
+                  </div>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

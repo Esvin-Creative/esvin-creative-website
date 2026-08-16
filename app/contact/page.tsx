@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactPageClient from "./ContactPageClient";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Contact Us | Esvin Creative",
@@ -21,7 +22,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
       <ContactPageClient />
     </>
   );

@@ -1,42 +1,9 @@
-export default function LocalBusinessInfo() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Esvin Creative",
-    "image": "https://www.esvincreative.in/logos/icon.png",
-    "@id": "https://www.esvincreative.in/#organization",
-    "url": "https://www.esvincreative.in",
-    "email": "hello@esvincreative.in",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Hyderabad",
-      "addressRegion": "Telangana",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 17.3850,
-      "longitude": 78.4867
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Hyderabad"
-    },
-    "sameAs": [
-      "https://github.com/Esvin-Creative",
-      "https://www.linkedin.com/company/esvin-creative",
-      "https://instagram.com/esvincreative.in",
-      "https://www.goodfirms.co/company/esvin-creative",
-      "https://www.sortlist.com/agency/esvin-creative",
-      "https://www.f6s.com/esvin-creative",
-      "https://www.crunchbase.com/organization/esvin-creative-eaf3"
-    ]
-  };
 
+
+
+export default function LocalBusinessInfo() {
   return (
     <div className="bg-black text-white p-8 sketch-border">
-      <script id="local-business-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      
       <h3 className="text-2xl font-bold font-ultra mb-6">Business Information</h3>
       
       <div className="space-y-4 font-ultra text-lg text-white/80">

@@ -9,6 +9,25 @@ import Footer from "@/components/Footer";
 import AISearchBlocks from "@/components/AISearchBlocks";
 import SketchHighlight from "@/components/SketchHighlight";
 
+const pricingAiBlocks = [
+  {
+    question: "How much does a project with Esvin Creative cost?",
+    answer: "Packages start at ₹15,000 for a Launch website and range up to ₹2,50,000+ for full digital-infrastructure engagements; custom software and mobile app builds start at ₹1,50,000. The exact cost depends on scope, so every engagement begins with a consultation and a written proposal before development starts."
+  },
+  {
+    question: "Are there hidden costs or surprise invoices?",
+    answer: "No. Clients receive a clear scope of work, timeline, and price before development begins. If requirements change mid-project, the added cost is discussed and approved before it's implemented — nothing is billed without prior agreement."
+  },
+  {
+    question: "Is there a faster way to get a price estimate?",
+    answer: "Yes — the project cost calculator lets you select your platform and features and see an itemized estimate instantly, without needing to submit an inquiry first."
+  },
+  {
+    question: "What's included in the price beyond the initial build?",
+    answer: "Every package includes a complimentary post-launch window (30 to 90 days depending on tier) covering support, performance checks, and — on higher tiers — training sessions and monthly reviews."
+  }
+];
+
 export default function PricingPageClient() {
   const [selectedPlan, setSelectedPlan] = useState<{name: string, budgetId: string} | null>(null);
   const [formData, setFormData] = useState({ name: "", email: "", company: "" });
@@ -293,7 +312,7 @@ export default function PricingPageClient() {
         </div>
       </section>
 
-      <AISearchBlocks />
+      <AISearchBlocks title="Pricing Questions, Answered" blocks={pricingAiBlocks} />
       <Footer />
 
 

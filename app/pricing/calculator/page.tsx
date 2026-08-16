@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CalculatorPageClient from "./CalculatorPageClient";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Project Cost Calculator | Esvin Creative",
@@ -22,7 +23,7 @@ export default function CalculatorPage() {
 
   return (
     <>
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
       <CalculatorPageClient />
     </>
   );

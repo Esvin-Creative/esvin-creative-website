@@ -68,21 +68,16 @@ export default function Hero() {
           </SketchHighlight>
         </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.5 }}
-          className="mt-8 text-xl md:text-2xl text-black/80 max-w-3xl font-ultra"
-        >
+        {/* Rendered plain (no opacity/transform gate): this paragraph is the LCP
+            element and the buttons below are the primary conversion action —
+            delaying their paint behind a fade-in cost 4s+ of LCP and left the
+            CTAs invisible for 2s+ on mobile. Everything else in this hero can
+            still animate; these two can't. */}
+        <p className="mt-8 text-xl md:text-2xl text-black/80 max-w-3xl font-ultra">
           Esvin Creative builds websites, mobile apps, and AI-powered solutions that help businesses operate, grow, and scale.
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 1.8 }}
-          className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-6 w-full sm:w-auto relative"
-        >
+        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-6 w-full sm:w-auto relative">
           <Image src="/assets/icons/rotated-right-arrow-svgrepo-com.svg" alt="Hand drawn right arrow pointing to schedule consultation" width={96} height={96} className="absolute -left-20 -top-16 hidden md:block opacity-60" />
           <Link
             href="#contact"
@@ -96,7 +91,7 @@ export default function Hero() {
           >
             View Our Work
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

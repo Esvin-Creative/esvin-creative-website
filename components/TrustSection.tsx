@@ -84,18 +84,6 @@ export default function TrustSection() {
             <p className="text-black/80 mb-6 text-lg font-ultra leading-relaxed flex-grow">
               A comprehensive learning management system tailored for interactive remote education.
             </p>
-              <div className="flex justify-between items-center mb-6">
-                <div>
-                  <h3 className="text-3xl font-bold font-ultra text-black">Educational Platform</h3>
-                  <p className="text-xl text-black/70 font-ultra">LMS</p>
-                </div>
-                <button 
-                  onClick={() => setActiveDemo(null)}
-                  className="p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors flex items-center justify-center w-10 h-10"
-                >
-                  <Cross1Icon className="w-6 h-6 text-black" />
-                </button>
-              </div>
           </motion.div>
 
           

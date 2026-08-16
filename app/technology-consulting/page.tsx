@@ -6,11 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import AISearchBlocks from "@/components/AISearchBlocks";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Technology Consulting Hyderabad | Digital Transformation Strategy",
-  description: "Expert technology consulting in Hyderabad. We guide digital transformation, system modernization, and IT strategy for growing organizations.",
-  keywords: ["technology consulting hyderabad", "digital transformation consulting", "IT consulting", "technology strategy", "system modernization", "telangana", "india"],
+  title: "Digital Technology Consulting Company in Hyderabad | Esvin Creative",
+  description: "Digital technology consulting for growing organizations in Hyderabad: digital transformation, system modernization, architecture reviews, and IT strategy.",
+  keywords: ["digital technology consulting company in hyderabad", "technology consulting hyderabad", "digital transformation consulting", "IT consulting", "technology strategy", "system modernization", "telangana", "india"],
   alternates: {
     canonical: "https://www.esvincreative.in/technology-consulting",
   },
@@ -91,8 +92,8 @@ export default function TechnologyConsultingPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script id="breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="service-schema" data={serviceSchema} />
+      <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       
       <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
@@ -105,7 +106,7 @@ export default function TechnologyConsultingPage() {
             Technology <SketchHighlight color="pink">Consulting</SketchHighlight>
           </h1>
           <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-10">
-            Strategic IT consulting in Hyderabad designed to align your technology investments with your business goals through digital transformation and system modernization.
+            Digital technology consulting for organizations in Hyderabad, designed to align your technology investments with your business goals through digital transformation and system modernization.
           </p>
           <div className="flex items-center gap-4 text-sm font-ultra text-black/50 mb-10">
             <span>Authored by: Esvin Joshua</span>

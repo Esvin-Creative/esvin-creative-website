@@ -6,3 +6,5 @@ AGENTS.md
 .env
 .env.*
 esvincreative.in-audit/
+
+.claude/

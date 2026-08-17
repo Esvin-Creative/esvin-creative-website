@@ -19,25 +19,25 @@ export default function Testimonials({ testimonials = [] }: TestimonialsProps) {
   const hasTestimonials = testimonials && testimonials.length > 0;
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-gray-50 border-y-2 border-dashed border-black relative">
+    <section className="py-16 md:py-24 px-6 md:px-12 bg-gray-50 border-y-2 border-dashed border-black relative">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-ultra text-black mb-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-ultra text-black mb-3 md:mb-6">
             Client <SketchHighlight color="pink">Testimonials</SketchHighlight>
           </h2>
-          <p className="text-xl font-ultra text-black/70 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-xl font-ultra text-black/70 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our partners have to say about working with Esvin Creative.
           </p>
         </div>
 
         {!hasTestimonials ? (
-          <div className="bg-white p-12 text-center sketch-border sketch-shadow max-w-3xl mx-auto">
-            <div className="text-6xl mb-6">💬</div>
-            <h3 className="text-3xl font-bold font-ultra text-black mb-4">Testimonials coming soon.</h3>
-            <p className="text-lg font-ultra text-black/60 mb-8">
+          <div className="bg-white p-6 sm:p-12 text-center sketch-border sketch-shadow max-w-3xl mx-auto">
+            <div className="text-4xl sm:text-6xl mb-4 sm:mb-6">💬</div>
+            <h3 className="text-2xl sm:text-3xl font-bold font-ultra text-black mb-3 sm:mb-4">Testimonials coming soon.</h3>
+            <p className="text-sm sm:text-lg font-ultra text-black/60 mb-6 sm:mb-8">
               We are currently compiling success stories and feedback from our recent client engagements. In the meantime, you can find us listed on:
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-2.5 sm:gap-4">
               {[
                 { name: "GoodFirms", href: "https://www.goodfirms.co/company/esvin-creative" },
                 { name: "Sortlist", href: "https://www.sortlist.com/agency/esvin-creative" },
@@ -49,7 +49,7 @@ export default function Testimonials({ testimonials = [] }: TestimonialsProps) {
                   href={profile.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-5 py-3 bg-white text-black font-ultra font-bold sketch-border hover:-translate-y-1 hover:bg-highlight-yellow/30 transition-all"
+                  className="px-3.5 py-2 sm:px-5 sm:py-3 bg-white text-black font-ultra font-bold text-xs sm:text-base sketch-border hover:-translate-y-1 hover:bg-highlight-yellow/30 transition-all"
                 >
                   {profile.name}
                 </a>

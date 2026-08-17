@@ -96,25 +96,25 @@ export default function TechnologyConsultingPage() {
       <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       
-      <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
+      <section className="pt-28 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
         <div className="absolute right-10 top-32 opacity-30 hidden md:block">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
         </div>
         
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold font-ultra text-black mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-ultra text-black mb-4 sm:mb-8 leading-tight">
             Technology <SketchHighlight color="pink">Consulting</SketchHighlight>
           </h1>
-          <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-10">
+          <p className="text-lg sm:text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-6 sm:mb-10">
             Digital technology consulting for organizations in Hyderabad, designed to align your technology investments with your business goals through digital transformation and system modernization.
           </p>
-          <div className="flex items-center gap-4 text-sm font-ultra text-black/50 mb-10">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm font-ultra text-black/50 mb-6 sm:mb-10">
             <span>Authored by: Esvin Joshua</span>
             <span>•</span>
             <span>Last Updated: {new Date().toLocaleDateString()}</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-blue hover:text-black transition-colors text-center">
+            <Link href="/contact" className="px-6 py-3.5 sm:px-8 sm:py-4 bg-black text-white text-lg sm:text-xl font-bold font-ultra sketch-border hover:bg-highlight-blue hover:text-black transition-colors text-center">
               Schedule a Consultation
             </Link>
           </div>
@@ -122,12 +122,12 @@ export default function TechnologyConsultingPage() {
       </section>
 
       
-      <section className="py-24 px-6 md:px-12 relative">
+      <section className="py-16 md:py-24 px-6 md:px-12 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16">
             <div className="max-w-2xl">
-              <h2 className="text-4xl font-bold font-ultra text-black mb-6">Navigating Digital Complexity</h2>
-              <p className="text-xl font-ultra text-black/80 leading-relaxed">
+              <h2 className="text-2xl sm:text-4xl font-bold font-ultra text-black mb-4 md:mb-6">Navigating Digital Complexity</h2>
+              <p className="text-base sm:text-xl font-ultra text-black/80 leading-relaxed">
                 Technology should accelerate your business, not hold it back. Our consulting services provide the clarity and roadmap needed to make confident engineering decisions.
               </p>
             </div>

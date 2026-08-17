@@ -56,40 +56,40 @@ export default function ProcessPage() {
       <Navbar />
       <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
-      <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
+      <section className="pt-28 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold font-ultra text-black mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-ultra text-black mb-4 sm:mb-8 leading-tight">
             Our <SketchHighlight color="blue">Process</SketchHighlight>
           </h1>
-          <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed">
+          <p className="text-lg sm:text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed">
             A systematic, engineering-driven approach to delivering reliable software — the same five stages, whether the engagement is a Launch-tier website or a full digital-infrastructure rebuild.
           </p>
         </div>
       </section>
 
-      <section className="py-24 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto space-y-12">
+      <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12">
+        <div className="max-w-5xl mx-auto space-y-6 sm:space-y-12">
           {steps.map((step) => (
-            <div key={step.num} className="flex flex-col md:flex-row gap-6 md:gap-10 bg-white sketch-border sketch-shadow p-8 md:p-10">
-              <div className="text-5xl font-bold font-ultra text-black/20 shrink-0">{step.num}</div>
+            <div key={step.num} className="flex flex-col md:flex-row gap-3 sm:gap-6 md:gap-10 bg-white sketch-border sketch-shadow p-6 sm:p-8 md:p-10">
+              <div className="text-3xl sm:text-5xl font-bold font-ultra text-black/20 shrink-0">{step.num}</div>
               <div>
-                <h2 className="text-3xl font-bold font-ultra text-black mb-4">{step.title}</h2>
-                <p className="text-lg font-ultra text-black/70 leading-relaxed">{step.desc}</p>
+                <h2 className="text-2xl sm:text-3xl font-bold font-ultra text-black mb-2 sm:mb-4">{step.title}</h2>
+                <p className="text-sm sm:text-base md:text-lg font-ultra text-black/70 leading-relaxed">{step.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="py-24 bg-highlight-blue border-t-2 border-dashed border-black text-center px-6">
+      <section className="py-16 md:py-24 bg-highlight-blue border-t-2 border-dashed border-black text-center px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold font-ultra text-black mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-ultra text-black mb-4 sm:mb-6">
             Ready to start Discovery?
           </h2>
-          <p className="text-xl font-ultra text-black/80 mb-10">
+          <p className="text-base sm:text-xl font-ultra text-black/80 mb-8 sm:mb-10">
             Schedule a consultation and we'll scope the project together.
           </p>
-          <Link href="/contact" className="inline-block px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-pink hover:text-black transition-colors">
+          <Link href="/contact" className="inline-block px-6 py-3.5 sm:px-8 sm:py-4 bg-black text-white text-lg sm:text-xl font-bold font-ultra sketch-border hover:bg-highlight-pink hover:text-black transition-colors">
             Schedule a Consultation
           </Link>
         </div>

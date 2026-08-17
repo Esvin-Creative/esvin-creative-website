@@ -68,38 +68,38 @@ export default function ContactPageClient() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      <section className="relative pt-40 pb-16 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
-        <Image src="/assets/icons/speech-bubble-drawn.svg" alt="" width={100} height={100} className="absolute top-20 right-10 md:right-32 opacity-60 animate-wobble" />
+      <section className="relative pt-28 md:pt-40 pb-12 md:pb-16 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
+        <Image src="/assets/icons/speech-bubble-drawn.svg" alt="" width={100} height={100} className="absolute top-20 right-10 md:right-32 opacity-60 animate-wobble hidden sm:block" />
 
         {/* Not animation-gated: this heading is the LCP element on /contact and
             was measuring 4.16s (Needs Improvement) behind the fade-in delay. */}
         <div>
-          <h1 className="text-5xl md:text-7xl font-bold text-black tracking-tight mb-8">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-black tracking-tight mb-4 sm:mb-8">
             <SketchHighlight color="yellow">Let's Build</SketchHighlight> Something That Lasts
           </h1>
-          <p className="text-2xl md:text-3xl font-ultra text-black/80 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg sm:text-2xl md:text-3xl font-ultra text-black/80 leading-relaxed max-w-3xl mx-auto">
             Schedule a consultation with our engineering team to discuss your technical requirements and business goals.
           </p>
         </div>
       </section>
 
-      <section className="relative py-16 bg-white border-t-2 border-dashed border-black/10">
-        <div className="absolute left-5 top-20 opacity-30">
+      <section className="relative py-12 md:py-16 bg-white border-t-2 border-dashed border-black/10">
+        <div className="absolute left-5 top-20 opacity-30 hidden sm:block">
           <Image src="/assets/icons/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" alt="" width={100} height={100} />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-5 gap-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-16 relative z-10">
 
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-2 space-y-12"
+            className="lg:col-span-2 space-y-8 md:space-y-12"
           >
-            <div className="bg-subtle-grid sketch-border sketch-shadow p-8 space-y-8">
-              <h2 className="relative inline-block text-3xl font-bold text-black mb-6 w-full">
+            <div className="bg-subtle-grid sketch-border sketch-shadow p-5 sm:p-8 space-y-6 sm:space-y-8">
+              <h2 className="relative inline-block text-2xl sm:text-3xl font-bold text-black mb-4 sm:mb-6 w-full">
                 Contact Information
-                <Image src="/assets/icons/underline-drawn.svg" alt="" width={180} height={20} className="absolute -bottom-4 left-0 w-[60%] h-5 opacity-50" />
+                <Image src="/assets/icons/underline-drawn.svg" alt="" width={180} height={20} className="absolute -bottom-3 sm:-bottom-4 left-0 w-[60%] h-4 sm:h-5 opacity-50" />
               </h2>
 
               <div className="flex items-start gap-4">

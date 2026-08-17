@@ -11,28 +11,28 @@ export default function IndustriesWeSupport() {
   ];
 
   return (
-    <section className="py-24 px-6 md:px-12 bg-white border-y-2 border-dashed border-black relative overflow-hidden">
+    <section className="py-16 md:py-24 px-6 md:px-12 bg-white border-y-2 border-dashed border-black relative overflow-hidden">
       <div className="absolute right-10 top-10 opacity-30">
-        <Image src="/assets/icons/star-drawn.svg" alt="Star decorative graphic" width={60} height={60} className="w-16 h-16 animate-wobble" />
+        <Image src="/assets/icons/star-drawn.svg" alt="Star decorative graphic" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 animate-wobble" />
       </div>
       
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-ultra text-black mb-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-ultra text-black mb-3 md:mb-6">
             Industries We <SketchHighlight color="blue">Support</SketchHighlight>
           </h2>
-          <p className="text-xl font-ultra text-black/70 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-xl font-ultra text-black/70 max-w-2xl mx-auto">
             We partner with diverse organizations to solve complex operational challenges through tailored technology solutions.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
           {industries.map((industry, index) => (
             <div 
               key={index}
-              className="flex items-center gap-4 bg-white px-8 py-6 sketch-border sketch-shadow hover:-translate-y-2 transition-transform duration-300"
+              className="flex items-center gap-3 bg-white px-5 py-3.5 sm:px-8 sm:py-6 sketch-border sketch-shadow hover:-translate-y-1 sm:hover:-translate-y-2 transition-transform duration-300"
             >
-              <span className="text-xl font-bold font-ultra text-black">
+              <span className="text-base sm:text-xl font-bold font-ultra text-black">
                 {industry.name}
               </span>
             </div>

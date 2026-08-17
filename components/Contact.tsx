@@ -89,43 +89,43 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white relative">
+    <section id="contact" className="py-16 md:py-24 bg-white relative">
       
-      <div className="absolute left-10 bottom-20 opacity-30">
-        <Image src="/assets/icons/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" alt="Candle flame decorative graphic" width={96} height={96} className="w-24 h-24" />
+      <div className="absolute left-5 md:left-10 bottom-20 opacity-30">
+        <Image src="/assets/icons/candle-with-burning-flame-hand-drawn-outline-svgrepo-com.svg" alt="Candle flame decorative graphic" width={96} height={96} className="w-16 h-16 md:w-24 md:h-24" />
       </div>
       <div className="absolute right-10 top-40 opacity-20 hidden md:block">
         <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles decorative graphic" width={112} height={112} className="w-28 h-28 animate-wobble" style={{ animationDelay: '1.5s' }} />
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16 relative inline-block w-full"
+          className="text-center mb-10 md:mb-16 relative inline-block w-full"
         >
-          <Image src="/assets/icons/speech-bubble-drawn.svg" alt="Speech bubble decorative graphic" width={80} height={80} className="absolute -top-16 right-0 md:right-32 opacity-60" />
-          <h2 className="relative inline-block text-4xl md:text-5xl font-bold text-black tracking-tight mb-6 z-10">
+          <Image src="/assets/icons/speech-bubble-drawn.svg" alt="Speech bubble decorative graphic" width={80} height={80} className="absolute -top-12 sm:-top-16 right-0 md:right-32 opacity-60 w-12 h-12 sm:w-20 sm:h-20" />
+          <h2 className="relative inline-block text-3xl sm:text-4xl md:text-5xl font-bold text-black tracking-tight mb-3 md:mb-6 z-10">
             Let&apos;s Build Something Great.
-            <Image src="/assets/icons/underline-drawn.svg" alt="Drawn underline decorative element" width={200} height={24} className="absolute -bottom-4 -left-[5%] w-[110%] h-6 opacity-50" />
+            <Image src="/assets/icons/underline-drawn.svg" alt="Drawn underline decorative element" width={200} height={24} className="absolute -bottom-3 sm:-bottom-4 -left-[5%] w-[110%] h-5 sm:h-6 opacity-50" />
           </h2>
-          <p className="text-2xl text-black/80 font-ultra">
+          <p className="text-base sm:text-2xl text-black/80 font-ultra">
             Reach out to discuss your next project, or just to say hello.
           </p>
         </motion.div>
 
-        <div className="bg-white sketch-border sketch-shadow p-8 md:p-12">
+        <div className="bg-white sketch-border sketch-shadow p-5 sm:p-8 md:p-12">
           {status === "success" ? (
-            <div className="text-center py-12">
-              <h3 className="text-3xl font-bold font-ultra text-black mb-4">Message Sent!</h3>
-              <p className="text-xl font-ultra text-black/80">
+            <div className="text-center py-8 sm:py-12">
+              <h3 className="text-2xl sm:text-3xl font-bold font-ultra text-black mb-3 sm:mb-4">Message Sent!</h3>
+              <p className="text-lg sm:text-xl font-ultra text-black/80">
                 Thanks for reaching out. We&apos;ll get back to you shortly.
               </p>
               <button
                 onClick={() => setStatus("idle")}
-                className="mt-8 px-6 py-2 bg-transparent sketch-border sketch-shadow text-black font-bold text-xl hover:bg-highlight-yellow transition-colors"
+                className="mt-6 sm:mt-8 px-6 py-2 bg-transparent sketch-border sketch-shadow text-black font-bold text-lg sm:text-xl hover:bg-highlight-yellow transition-colors"
               >
                 Send Another
               </button>
@@ -135,74 +135,71 @@ export default function Contact() {
               <div className="bg-white p-3 sketch-border shadow-sm hidden md:block">
                 <EnvelopeClosedIcon className="w-6 h-6 text-black" />
               </div>
-              <form className="w-full space-y-6" onSubmit={handleSubmit}>
+              <form className="w-full space-y-4 sm:space-y-6" onSubmit={handleSubmit}>
                 
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="name" className="text-xl font-ultra font-bold text-black">Name *</label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <label htmlFor="name" className="text-base sm:text-xl font-ultra font-bold text-black">Name *</label>
                     <input
                       type="text"
                       id="name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 bg-transparent border-b-2 border-dashed border-black focus:outline-none focus:border-solid transition-all text-lg font-ultra"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-transparent border-b-2 border-dashed border-black focus:outline-none focus:border-solid transition-all text-base sm:text-lg font-ultra"
                       placeholder="John Doe"
                     />
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="company" className="text-xl font-ultra font-bold text-black">Company *</label>
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <label htmlFor="company" className="text-base sm:text-xl font-ultra font-bold text-black">Company *</label>
                     <input
                       type="text"
                       id="company"
                       required
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full px-4 py-3 bg-transparent border-b-2 border-dashed border-black focus:outline-none focus:border-solid transition-all text-lg font-ultra"
+                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-transparent border-b-2 border-dashed border-black focus:outline-none focus:border-solid transition-all text-base sm:text-lg font-ultra"
                       placeholder="Acme Inc."
                     />
                   </div>
                 </div>
 
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="email" className="text-xl font-ultra font-bold text-black">Email *</label>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <label htmlFor="email" className="text-base sm:text-xl font-ultra font-bold text-black">Email *</label>
                     <input
                       type="email"
                       id="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className={`w-full px-4 py-3 bg-transparent border-b-2 border-dashed ${errors.email ? 'border-red-500' : 'border-black'} focus:outline-none focus:border-solid transition-all text-lg font-ultra`}
+                      className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-transparent border-b-2 border-dashed ${errors.email ? 'border-red-500' : 'border-black'} focus:outline-none focus:border-solid transition-all text-base sm:text-lg font-ultra`}
                       placeholder="john@example.com"
                     />
-                    {errors.email && <p className="text-red-500 text-sm font-ultra">{errors.email}</p>}
+                    {errors.email && <p className="text-red-500 text-xs sm:text-sm font-ultra">{errors.email}</p>}
                   </div>
-                  <div className="space-y-2">
-                    <label htmlFor="phone" className="text-xl font-ultra font-bold text-black">Phone Number *</label>
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <label htmlFor="phone" className="text-base sm:text-xl font-ultra font-bold text-black">Phone Number *</label>
                     <input
                       type="tel"
                       id="phone"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className={`w-full px-4 py-3 bg-transparent border-b-2 border-dashed ${errors.phone ? 'border-red-500' : 'border-black'} focus:outline-none focus:border-solid transition-all text-lg font-ultra`}
+                      className={`w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-transparent border-b-2 border-dashed ${errors.phone ? 'border-red-500' : 'border-black'} focus:outline-none focus:border-solid transition-all text-base sm:text-lg font-ultra`}
                       placeholder="+91 98765 43210"
                     />
-                    {errors.phone && <p className="text-red-500 text-sm font-ultra">{errors.phone}</p>}
+                    {errors.phone && <p className="text-red-500 text-xs sm:text-sm font-ultra">{errors.phone}</p>}
                   </div>
                 </div>
 
-                
-                <div className="space-y-2">
-                  <label htmlFor="budget" className="text-xl font-ultra font-bold text-black">Budget Range</label>
+                <div className="space-y-1.5 sm:space-y-2">
+                  <label htmlFor="budget" className="text-base sm:text-xl font-ultra font-bold text-black">Budget Range</label>
                   <select
                     id="budget"
                     value={formData.budget}
                     onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                    className="w-full px-4 py-3 bg-white border-2 border-solid border-black focus:outline-none transition-all text-lg font-ultra"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-white border-2 border-solid border-black focus:outline-none transition-all text-base sm:text-lg font-ultra"
                   >
                     <option value="">Select a budget range...</option>
                     <option value="< ₹15k">&lt; ₹15k</option>
@@ -212,43 +209,42 @@ export default function Contact() {
                   </select>
                 </div>
 
-                
-                <div className="space-y-2">
-                  <label htmlFor="project" className="text-xl font-ultra font-bold text-black">Project Description *</label>
+                <div className="space-y-1.5 sm:space-y-2">
+                  <label htmlFor="project" className="text-base sm:text-xl font-ultra font-bold text-black">Project Description *</label>
                   <textarea
                     id="project"
                     rows={4}
                     required
                     value={formData.project}
                     onChange={(e) => setFormData({ ...formData, project: e.target.value })}
-                    className="w-full px-4 py-3 bg-transparent border-2 border-dashed border-black rounded-xl focus:outline-none focus:border-solid transition-all resize-none text-lg font-ultra"
+                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 bg-transparent border-2 border-dashed border-black rounded-xl focus:outline-none focus:border-solid transition-all resize-none text-base sm:text-lg font-ultra"
                     placeholder="Tell us about what you want to build..."
                   />
                 </div>
 
                 {status === "error" && (
-                  <p className="text-red-500 font-ultra text-lg">Something went wrong. Please try again or email us directly.</p>
+                  <p className="text-red-500 font-ultra text-base sm:text-lg">Something went wrong. Please try again or email us directly.</p>
                 )}
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 py-5 bg-black text-white font-bold text-2xl hover:bg-highlight-yellow hover:text-black transition-colors sketch-border sketch-shadow disabled:opacity-50 disabled:cursor-not-allowed group mt-8"
+                  className="w-full flex items-center justify-center gap-2 py-3.5 sm:py-5 bg-black text-white font-bold text-lg sm:text-2xl hover:bg-highlight-yellow hover:text-black transition-colors sketch-border sketch-shadow disabled:opacity-50 disabled:cursor-not-allowed group mt-6 sm:mt-8"
                 >
                   {isSubmitting ? "Submitting..." : "Send Message"}
-                  {!isSubmitting && <PaperPlaneIcon className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
+                  {!isSubmitting && <PaperPlaneIcon className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />}
                 </button>
               </form>
             </div>
           )}
 
-          <div className="mt-12 pt-8 border-t-2 border-dashed border-black flex flex-col items-center">
-            <p className="text-xl font-ultra text-black/70 mb-2">Or email us directly at</p>
+          <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t-2 border-dashed border-black flex flex-col items-center text-center">
+            <p className="text-base sm:text-xl font-ultra text-black/70 mb-2">Or email us directly at</p>
             <a
               href="mailto:hello@esvincreative.in"
-              className="flex items-center gap-2 text-black font-bold text-2xl hover:bg-highlight-blue transition-colors px-4 py-2 rounded-lg"
+              className="flex items-center gap-2 text-black font-bold text-lg sm:text-2xl hover:bg-highlight-blue transition-colors px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg break-all"
             >
-              <EnvelopeClosedIcon className="w-6 h-6" />
+              <EnvelopeClosedIcon className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
               hello@esvincreative.in
             </a>
           </div>

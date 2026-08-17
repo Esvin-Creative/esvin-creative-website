@@ -17,14 +17,14 @@ export default function Hero() {
           initial={{ opacity: 0, rotate: -5 }}
           animate={{ opacity: 1, rotate: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-8 relative"
+          className="mb-6 md:mb-8 relative"
         >
-          <span className="font-ultra text-3xl md:text-4xl text-black">We are Esvin Creative</span>
-          <Image src="/assets/icons/bars-graphic-up-hand-drawn-symbol-svgrepo-com.svg" alt="Hand drawn upward bars graphic representing growth" width={64} height={64} className="absolute -right-16 -top-10 opacity-70" />
+          <span className="font-ultra text-2xl sm:text-3xl md:text-4xl text-black">We are Esvin Creative</span>
+          <Image src="/assets/icons/bars-graphic-up-hand-drawn-symbol-svgrepo-com.svg" alt="Hand drawn upward bars graphic representing growth" width={64} height={64} className="absolute -right-8 -top-8 w-10 h-10 md:w-16 md:h-16 md:-right-16 md:-top-10 opacity-70" />
         </motion.div>
 
-        <h1 className="relative text-4xl md:text-7xl font-bold tracking-tight max-w-5xl leading-tight">
-          <Image src="/assets/icons/sparkles-drawn.svg" alt="Hand drawn sparkles graphic representing creativity" width={80} height={80} className="absolute -left-12 -top-12 opacity-80 animate-wobble" priority />
+        <h1 className="relative text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight max-w-5xl leading-tight">
+          <Image src="/assets/icons/sparkles-drawn.svg" alt="Hand drawn sparkles graphic representing creativity" width={80} height={80} className="absolute -left-4 -top-8 w-12 h-12 md:w-20 md:h-20 md:-left-12 md:-top-12 opacity-80 animate-wobble" priority />
           <motion.span 
             initial={{ opacity: 1 }} 
             animate={{ opacity: 0.6 }} 
@@ -73,21 +73,21 @@ export default function Hero() {
             delaying their paint behind a fade-in cost 4s+ of LCP and left the
             CTAs invisible for 2s+ on mobile. Everything else in this hero can
             still animate; these two can't. */}
-        <p className="mt-8 text-xl md:text-2xl text-black/80 max-w-3xl font-ultra">
+        <p className="mt-6 md:mt-8 text-lg sm:text-xl md:text-2xl text-black/80 max-w-3xl font-ultra leading-relaxed">
           Esvin Creative builds websites, mobile apps, and AI-powered solutions that help businesses operate, grow, and scale.
         </p>
 
-        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row gap-6 w-full sm:w-auto relative">
+        <div className="mt-6 md:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto relative">
           <Image src="/assets/icons/rotated-right-arrow-svgrepo-com.svg" alt="Hand drawn right arrow pointing to schedule consultation" width={96} height={96} className="absolute -left-20 -top-16 hidden md:block opacity-60" />
           <Link
             href="#contact"
-            className="group flex items-center justify-center gap-2 px-8 py-4 text-lg font-bold text-black bg-white sketch-border sketch-shadow hover:bg-highlight-yellow transition-all"
+            className="group flex items-center justify-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-black bg-white sketch-border sketch-shadow hover:bg-highlight-yellow transition-all"
           >
             Schedule a Consultation
           </Link>
           <Link
             href="#services"
-            className="flex items-center justify-center px-8 py-4 text-lg font-bold text-black bg-transparent sketch-border-dashed hover:bg-black/5 transition-colors"
+            className="flex items-center justify-center px-6 py-3.5 sm:px-8 sm:py-4 text-base sm:text-lg font-bold text-black bg-transparent sketch-border-dashed hover:bg-black/5 transition-colors"
           >
             View Our Work
           </Link>

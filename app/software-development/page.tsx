@@ -96,25 +96,25 @@ export default function SoftwareDevelopmentPage() {
       <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       
-      <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
-        <div className="absolute left-10 top-32 opacity-30">
+      <section className="pt-28 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
+        <div className="absolute left-10 top-32 opacity-30 hidden sm:block">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
         </div>
         
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold font-ultra text-black mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-ultra text-black mb-4 sm:mb-8 leading-tight">
             Software <SketchHighlight color="pink">Development</SketchHighlight> Services
           </h1>
-          <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-10">
+          <p className="text-lg sm:text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-6 sm:mb-10">
             As a leading software development company in Hyderabad, we engineer custom software, scalable web applications, and enterprise platforms that drive digital transformation.
           </p>
-          <div className="flex items-center gap-4 text-sm font-ultra text-black/50 mb-10">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm font-ultra text-black/50 mb-6 sm:mb-10">
             <span>Authored by: Esvin Joshua</span>
             <span>•</span>
             <span>Last Updated: {new Date().toLocaleDateString()}</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-yellow hover:text-black transition-colors text-center">
+            <Link href="/contact" className="px-6 py-3.5 sm:px-8 sm:py-4 bg-black text-white text-lg sm:text-xl font-bold font-ultra sketch-border hover:bg-highlight-yellow hover:text-black transition-colors text-center">
               Schedule a Consultation
             </Link>
           </div>
@@ -122,15 +122,15 @@ export default function SoftwareDevelopmentPage() {
       </section>
 
       
-      <section className="py-24 px-6 md:px-12 relative">
+      <section className="py-16 md:py-24 px-6 md:px-12 relative">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold font-ultra text-black mb-12">Building Digital Foundations</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <h2 className="text-2xl sm:text-4xl font-bold font-ultra text-black mb-6 sm:mb-12">Building Digital Foundations</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div>
-              <p className="text-xl font-ultra text-black/80 leading-relaxed mb-6">
+              <p className="text-base sm:text-xl font-ultra text-black/80 leading-relaxed mb-4 sm:mb-6">
                 Off-the-shelf software rarely fits perfectly. We provide <strong>software consulting</strong> and build <strong>custom software</strong> tailored exactly to your operational workflows and business objectives.
               </p>
-              <p className="text-xl font-ultra text-black/80 leading-relaxed">
+              <p className="text-base sm:text-xl font-ultra text-black/80 leading-relaxed">
                 Whether you need robust <strong>business platforms</strong>, streamlined <strong>internal systems</strong>, engaging <strong>customer portals</strong>, or full-scale <strong>SaaS development</strong>, our engineering team in India delivers solutions architected for performance and scale.
               </p>
             </div>

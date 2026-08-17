@@ -26,7 +26,7 @@ export default function TrustSection() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          <div className="absolute -top-16 -left-16 opacity-40">
+          <div className="absolute -top-16 -left-16 opacity-40 hidden sm:block">
             <Image src="/assets/icons/loop-arrows-svgrepo-com.svg" alt="Looping arrows decorative graphic" width={128} height={128} className="w-32 h-32" />
           </div>
           <div className="absolute -bottom-10 -right-10 opacity-30 hidden md:block z-0">
@@ -39,77 +39,78 @@ export default function TrustSection() {
           
           <motion.div
             whileHover={{ y: -5 }}
-            className="group relative p-8 bg-white sketch-border sketch-shadow transition-all flex flex-col h-full"
+            className="group relative p-6 sm:p-8 bg-white sketch-border sketch-shadow transition-all flex flex-col h-full"
           >
-            <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center mb-6 text-black font-bold text-2xl sketch-border-dashed">
+            <div className="h-14 w-14 sm:h-16 sm:w-16 bg-white rounded-full flex items-center justify-center mb-4 sm:mb-6 text-black font-bold text-xl sm:text-2xl sketch-border-dashed">
               S
             </div>
-                <div className="absolute inset-0 bg-highlight-yellow translate-x-2 translate-y-2 border-2 border-black -z-10 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
-                <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10 gap-4">
-                  <div className="flex gap-4">
-                    <button 
-                      onClick={() => setActiveDemo('sreyas')}
-                      className="bg-white p-3 rounded-full hover:scale-110 transition-transform"
-                    >
-                      <ImageIcon className="w-6 h-6 text-black" />
-                    </button>
-                    <a 
-                      href="https://sreyas.ac.in"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white p-3 rounded-full hover:scale-110 transition-transform"
-                    >
-                      <ExternalLinkIcon className="w-6 h-6 text-black" />
-                    </a>
-                  </div>
-                </div>
-            <h3 className="text-2xl font-bold text-black mb-3">Sreyas Institute of Engineering & Technology</h3>
-            <p className="text-black/80 mb-6 text-lg font-ultra leading-relaxed flex-grow">
+            <div className="absolute inset-0 bg-highlight-yellow translate-x-2 translate-y-2 border-2 border-black -z-10 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
+            
+            <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3">Sreyas Institute of Engineering & Technology</h3>
+            <p className="text-black/80 mb-4 sm:mb-6 text-base sm:text-lg font-ultra leading-relaxed flex-grow">
               Development and technical solutions delivered for one of Hyderabad&apos;s leading engineering institutions.
             </p>
+            <div className="flex items-center gap-3 mt-auto pt-2">
+              <button 
+                onClick={() => setActiveDemo('sreyas')}
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-black text-white text-xs sm:text-sm font-bold hover:bg-highlight-yellow hover:text-black transition-colors sketch-border"
+              >
+                <ImageIcon className="w-3.5 h-3.5" /> View Samples
+              </button>
+              <a 
+                href="https://sreyas.ac.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 px-3.5 py-1.5 bg-white text-black text-xs sm:text-sm font-bold hover:bg-gray-100 transition-colors sketch-border"
+              >
+                Visit <ExternalLinkIcon className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </motion.div>
 
           
           <motion.div
             whileHover={{ y: -5 }}
-            className="group relative p-8 bg-white sketch-border sketch-shadow transition-all flex flex-col h-full"
+            className="group relative p-6 sm:p-8 bg-white sketch-border sketch-shadow transition-all flex flex-col h-full"
           >
-            <div className="absolute top-6 right-6 px-3 py-1 bg-highlight-yellow text-black text-sm font-bold sketch-border-dashed rotate-3">
+            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 px-2.5 py-0.5 sm:px-3 sm:py-1 bg-highlight-yellow text-black text-xs sm:text-sm font-bold sketch-border-dashed rotate-3">
               Ongoing
             </div>
-            <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center mb-6 text-black sketch-border-dashed">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <div className="h-14 w-14 sm:h-16 sm:w-16 bg-white rounded-full flex items-center justify-center mb-4 sm:mb-6 text-black sketch-border-dashed">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
-            <h3 className="text-2xl font-bold text-black mb-3">Educational Platform</h3>
-            <p className="text-black/80 mb-6 text-lg font-ultra leading-relaxed flex-grow">
+            <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3">Educational Platform</h3>
+            <p className="text-black/80 mb-4 sm:mb-6 text-base sm:text-lg font-ultra leading-relaxed flex-grow">
               A comprehensive learning management system tailored for interactive remote education.
             </p>
+            <div className="flex items-center gap-3 mt-auto pt-2">
+              <span className="inline-flex items-center gap-2 text-sm font-bold text-black/50">
+                In Development
+              </span>
+            </div>
           </motion.div>
 
           
           <motion.div
             whileHover={{ y: -5 }}
-            className="group relative p-8 bg-white sketch-border sketch-shadow transition-all flex flex-col h-full"
+            className="group relative p-6 sm:p-8 bg-white sketch-border sketch-shadow transition-all flex flex-col h-full"
           >
-            <div className="absolute top-6 right-6 px-3 py-1 bg-highlight-blue text-black text-sm font-bold sketch-border-dashed -rotate-3">
+            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 px-2.5 py-0.5 sm:px-3 sm:py-1 bg-highlight-blue text-black text-xs sm:text-sm font-bold sketch-border-dashed -rotate-3">
               Ongoing
             </div>
-            <div className="h-16 w-16 bg-white rounded-full flex items-center justify-center mb-6 text-black sketch-border-dashed">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            <div className="h-14 w-14 sm:h-16 sm:w-16 bg-white rounded-full flex items-center justify-center mb-4 sm:mb-6 text-black sketch-border-dashed">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
             </div>
-            <h3 className="text-2xl font-bold text-black mb-3">BYF App</h3>
-            <p className="text-black/80 mb-6 text-lg font-ultra leading-relaxed flex-grow">
+            <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3">BYF App</h3>
+            <p className="text-black/80 mb-4 sm:mb-6 text-base sm:text-lg font-ultra leading-relaxed flex-grow">
               A worship management platform for organizations, helping streamline member management and communication.
             </p>
-            <div className="flex flex-col gap-3 mt-auto">
-              <span className="inline-flex items-center gap-2 text-md font-bold text-black/50">
-                In Development
-              </span>
+            <div className="flex items-center gap-3 mt-auto pt-2">
               <button
                 onClick={() => setActiveDemo('byf')}
-                className="inline-flex w-fit items-center gap-2 px-4 py-2 mt-2 bg-black text-white text-sm font-bold hover:bg-highlight-blue hover:text-black transition-colors sketch-border"
+                className="inline-flex w-fit items-center gap-1.5 px-3.5 py-1.5 bg-black text-white text-xs sm:text-sm font-bold hover:bg-highlight-blue hover:text-black transition-colors sketch-border"
               >
-                <ImageIcon className="w-4 h-4" /> View Samples
+                <ImageIcon className="w-3.5 h-3.5" /> View Samples
               </button>
             </div>
           </motion.div>
@@ -129,17 +130,17 @@ export default function TrustSection() {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.95, opacity: 0 }}
-              className="relative bg-white sketch-border sketch-shadow p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="relative bg-white sketch-border sketch-shadow p-5 sm:p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={e => e.stopPropagation()}
             >
               <button 
                 onClick={() => setActiveDemo(null)}
-                className="absolute top-6 right-6 p-2 bg-black text-white hover:bg-highlight-pink hover:text-black transition-colors sketch-border z-10"
+                className="absolute top-4 right-4 sm:top-6 sm:right-6 p-1.5 sm:p-2 bg-black text-white hover:bg-highlight-pink hover:text-black transition-colors sketch-border z-10"
               >
-                <Cross1Icon className="w-6 h-6" />
+                <Cross1Icon className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
               
-              <h3 className="text-3xl font-bold mb-8 text-black border-b-2 border-black/10 pb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-black border-b-2 border-black/10 pb-4 pr-10">
                 {activeDemo === 'sreyas' ? 'Sreyas Institute Demo' : 
                  activeDemo === 'edu' ? 'Educational Platform Demo' : 
                  'BYF App Demo'}

@@ -96,25 +96,25 @@ export default function CloudInfrastructurePage() {
       <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
       
-      <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
-        <div className="absolute left-10 top-32 opacity-30">
+      <section className="pt-28 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
+        <div className="absolute left-10 top-32 opacity-30 hidden sm:block">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
         </div>
         
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold font-ultra text-black mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-ultra text-black mb-4 sm:mb-8 leading-tight">
             Cloud Infrastructure & <SketchHighlight color="blue">DevOps</SketchHighlight>
           </h1>
-          <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-10">
+          <p className="text-lg sm:text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-6 sm:mb-10">
             Cloud infrastructure solutions for businesses in Hyderabad. We design, migrate, and manage scalable cloud architecture so you can focus on building your business.
           </p>
-          <div className="flex items-center gap-4 text-sm font-ultra text-black/50 mb-10">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm font-ultra text-black/50 mb-6 sm:mb-10">
             <span>Authored by: Esvin Joshua</span>
             <span>•</span>
             <span>Last Updated: {new Date().toLocaleDateString()}</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact" className="px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-yellow hover:text-black transition-colors text-center">
+            <Link href="/contact" className="px-6 py-3.5 sm:px-8 sm:py-4 bg-black text-white text-lg sm:text-xl font-bold font-ultra sketch-border hover:bg-highlight-yellow hover:text-black transition-colors text-center">
               Schedule a Consultation
             </Link>
           </div>
@@ -122,11 +122,11 @@ export default function CloudInfrastructurePage() {
       </section>
 
       
-      <section className="py-24 px-6 md:px-12 relative">
+      <section className="py-16 md:py-24 px-6 md:px-12 relative">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold font-ultra text-black mb-12">Comprehensive Cloud Services</h2>
+          <h2 className="text-2xl sm:text-4xl font-bold font-ultra text-black mb-6 sm:mb-12">Comprehensive Cloud Services</h2>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               { title: "Cloud Architecture", desc: "Designing highly available, scalable systems on AWS, Google Cloud, and Vercel." },
               { title: "Cloud Migration", desc: "Seamless transition of legacy systems to modern cloud infrastructure with zero downtime." },

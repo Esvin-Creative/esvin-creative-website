@@ -38,42 +38,42 @@ export default function AboutPageClient() {
       <Navbar />
 
 
-      <section className="relative pt-40 pb-20 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
-        <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles decorative graphic" width={80} height={80} className="absolute top-20 left-10 md:left-20 opacity-40 animate-wobble" />
-        <Image src="/assets/icons/loop-arrows-svgrepo-com.svg" alt="Loop arrows decorative graphic" width={100} height={100} className="absolute bottom-10 right-10 md:right-20 opacity-20" />
+      <section className="relative pt-28 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
+        <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles decorative graphic" width={80} height={80} className="absolute top-20 left-10 md:left-20 opacity-40 animate-wobble hidden sm:block" />
+        <Image src="/assets/icons/loop-arrows-svgrepo-com.svg" alt="Loop arrows decorative graphic" width={100} height={100} className="absolute bottom-10 right-10 md:right-20 opacity-20 hidden sm:block" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-black tracking-tight mb-8">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-black tracking-tight mb-4 sm:mb-8">
             <SketchHighlight color="pink">About Esvin Creative</SketchHighlight>
           </h1>
-          <p className="text-2xl md:text-3xl font-ultra text-black/80 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg sm:text-2xl md:text-3xl font-ultra text-black/80 leading-relaxed max-w-4xl mx-auto">
             Technology consulting, software development, cloud infrastructure, and digital transformation services for modern organizations.
           </p>
         </motion.div>
       </section>
 
 
-      <section className="relative py-24 bg-subtle-grid border-t-2 border-dashed border-black">
-        <div className="absolute left-5 bottom-10 opacity-30">
+      <section className="relative py-16 md:py-24 bg-subtle-grid border-t-2 border-dashed border-black">
+        <div className="absolute left-5 bottom-10 opacity-30 hidden sm:block">
           <Image src="/assets/icons/question-sign-hand-drawn-outline-svgrepo-com.svg" alt="Question mark decorative graphic" width={80} height={80} />
         </div>
 
-        <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="relative inline-block text-4xl font-bold text-black mb-12 text-center w-full">
+            <h2 className="relative inline-block text-2xl sm:text-4xl font-bold text-black mb-6 sm:mb-12 text-center w-full">
               Why Esvin Creative Exists
-              <Image src="/assets/icons/underline-drawn.svg" alt="Underline emphasis graphic" width={200} height={20} className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[60%] h-5 opacity-50" />
+              <Image src="/assets/icons/underline-drawn.svg" alt="Underline emphasis graphic" width={200} height={20} className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-[60%] h-4 sm:h-5 opacity-50" />
             </h2>
-            <div className="bg-white sketch-border sketch-shadow p-10 space-y-6 text-xl font-ultra text-black/80 leading-relaxed relative group">
+            <div className="bg-white sketch-border sketch-shadow p-6 sm:p-10 space-y-4 sm:space-y-6 text-base sm:text-xl font-ultra text-black/80 leading-relaxed relative group">
               <Image src="/assets/icons/star-drawn.svg" alt="Star decorative graphic" width={40} height={40} className="absolute -top-4 -right-4 opacity-0 group-hover:opacity-100 transition-opacity" />
               <p>
                 Modern organizations frequently struggle with fragmented technology. When systems are built in silos and maintained by multiple specialized vendors, managing that complexity becomes a full-time job.

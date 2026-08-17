@@ -32,22 +32,22 @@ export default function CompanyPage() {
       <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
 
-      <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
-        <div className="absolute left-10 top-32 opacity-30">
+      <section className="pt-28 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
+        <div className="absolute left-10 top-32 opacity-30 hidden sm:block">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
         </div>
         
         <div className="max-w-7xl mx-auto">
-          <div className="inline-block px-3 py-1 bg-black text-white text-sm font-ultra uppercase tracking-wider sketch-border mb-6">
+          <div className="inline-block px-3 py-1 bg-black text-white text-xs sm:text-sm font-ultra uppercase tracking-wider sketch-border mb-4 sm:mb-6">
             Corporate Profile
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold font-ultra text-black mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-ultra text-black mb-4 sm:mb-8 leading-tight">
             About the <SketchHighlight color="blue">Company</SketchHighlight>
           </h1>
-          <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-10">
+          <p className="text-lg sm:text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-6 sm:mb-10">
             Esvin Creative is an end-to-end technology partner. We bridge the gap between high-level business strategy and deep technical execution.
           </p>
-          <div className="flex items-center gap-4 text-sm font-ultra text-black/50">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm font-ultra text-black/50">
             <span>Authored by: Esvin Joshua (Founder)</span>
             <span>•</span>
             <span>Last Updated: {new Date().toLocaleDateString()}</span>
@@ -55,13 +55,13 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 md:px-12 relative">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-16">
+      <section className="py-16 md:py-24 px-6 md:px-12 relative">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-16">
           
-          <div className="lg:col-span-2 space-y-16">
+          <div className="lg:col-span-2 space-y-10 md:space-y-16">
             
-            <div className="space-y-6">
-              <h2 className="text-4xl font-bold font-ultra text-black border-b-2 border-black pb-4 inline-block">Our Mission</h2>
+            <div className="space-y-4 sm:space-y-6">
+              <h2 className="text-2xl sm:text-4xl font-bold font-ultra text-black border-b-2 border-black pb-3 sm:pb-4 inline-block">Our Mission</h2>
               <p className="text-xl font-ultra text-black/80 leading-relaxed">
                 Our mission is to eliminate the complexity of digital transformation. We believe that technology should accelerate your business, not hold it back. By taking full ownership of architecture, development, and infrastructure, we allow organizations to focus on their core competencies.
               </p>

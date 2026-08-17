@@ -68,23 +68,23 @@ export default function PricingPageClient() {
       <Navbar />
 
 
-      <section className="relative pt-40 pb-20 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
-        <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles" width={80} height={80} className="absolute top-20 left-10 md:left-20 opacity-40 animate-wobble" />
+      <section className="relative pt-28 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
+        <Image src="/assets/icons/sparkles-drawn.svg" alt="Sparkles" width={80} height={80} className="absolute top-20 left-10 md:left-20 opacity-40 animate-wobble hidden sm:block" />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-black tracking-tight mb-8">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-black tracking-tight mb-4 sm:mb-8">
             <SketchHighlight color="pink">Pricing & Packages</SketchHighlight>
           </h1>
-          <p className="text-2xl md:text-3xl font-ultra text-black/80 leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg sm:text-2xl md:text-3xl font-ultra text-black/80 leading-relaxed max-w-4xl mx-auto">
             We believe clients should know exactly what they're paying for. Choose a package below or calculate your custom project.
           </p>
 
-          <div className="mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
-            <Link href="/pricing/calculator" className="w-full md:w-auto px-8 py-4 bg-black text-white font-bold text-xl sketch-border sketch-shadow hover:-translate-y-1 hover:bg-highlight-yellow hover:text-black transition-all flex items-center justify-center gap-2">
+          <div className="mt-8 sm:mt-12 flex flex-col md:flex-row items-center justify-center gap-6">
+            <Link href="/pricing/calculator" className="w-full md:w-auto px-6 py-3.5 sm:px-8 sm:py-4 bg-black text-white font-bold text-lg sm:text-xl sketch-border sketch-shadow hover:-translate-y-1 hover:bg-highlight-yellow hover:text-black transition-all flex items-center justify-center gap-2">
               <Image src="/assets/icons/asterisk-drawn.svg" alt="" width={24} height={24} className="filter invert group-hover:invert-0" />
               Build Custom Package
             </Link>
@@ -93,16 +93,16 @@ export default function PricingPageClient() {
       </section>
 
 
-      <section className="relative py-24 bg-subtle-grid border-t-2 border-dashed border-black">
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
+      <section className="relative py-16 md:py-24 bg-subtle-grid border-t-2 border-dashed border-black">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-20">
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white sketch-border sketch-shadow p-8 md:p-10 flex flex-col group relative"
+              className="bg-white sketch-border sketch-shadow p-6 sm:p-8 md:p-10 flex flex-col group relative"
             >
               <h3 className="text-3xl font-bold text-black mb-2">Launch</h3>
               <div className="text-2xl font-bold text-black/60 mb-4">₹15,000 - ₹25,000</div>

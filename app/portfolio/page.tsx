@@ -43,22 +43,22 @@ export default function PortfolioPage() {
       <Navbar />
       <JsonLd id="breadcrumb-schema" data={breadcrumbSchema} />
 
-      <section className="pt-40 pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
-        <div className="absolute left-10 top-32 opacity-30">
+      <section className="pt-28 md:pt-40 pb-12 md:pb-20 px-6 md:px-12 relative border-b-2 border-dashed border-black">
+        <div className="absolute left-10 top-32 opacity-30 hidden sm:block">
           <Image src="/assets/icons/sparkles-drawn.svg" alt="" width={80} height={80} className="w-20 h-20 animate-wobble" />
         </div>
         
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold font-ultra text-black mb-8 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-ultra text-black mb-4 sm:mb-8 leading-tight">
             Our <SketchHighlight color="yellow">Portfolio</SketchHighlight>
           </h1>
-          <p className="text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-10">
+          <p className="text-lg sm:text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-6 sm:mb-10">
             A showcase of the custom software, platforms, and digital experiences we've engineered for our partners.
           </p>
         </div>
       </section>
 
-      <section className="py-24 px-6 md:px-12 bg-gray-50">
+      <section className="py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col gap-16">
             {portfolioItems.map((item, index) => (

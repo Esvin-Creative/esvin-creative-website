@@ -98,9 +98,9 @@ export default function NotFoundClient() {
     <main className="min-h-screen bg-white relative flex flex-col justify-between selection:bg-highlight-yellow">
       <Navbar />
 
-      {/* Hero Section */}
+      
       <section className="relative pt-36 md:pt-44 pb-20 px-6 md:px-12 max-w-6xl mx-auto text-center w-full">
-        {/* Floating Sketch Decorative Elements */}
+        
         <div className="absolute top-24 left-6 md:left-12 opacity-40 pointer-events-none hidden sm:block">
           <Image
             src="/assets/icons/sparkles-drawn.svg"
@@ -141,13 +141,13 @@ export default function NotFoundClient() {
           transition={{ duration: 0.5 }}
           className="relative z-10"
         >
-          {/* Hand-Drawn Badge */}
+          
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-highlight-yellow sketch-border sketch-shadow text-black font-ultra text-sm md:text-base font-bold uppercase tracking-wider mb-6 -rotate-1 hover:rotate-0 transition-transform">
             <span className="inline-block w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
             HTTP Status: 404 &bull; Destination Missing
           </div>
 
-          {/* Big 404 Headline */}
+          
           <div className="relative inline-block mb-6">
             <h1 className="text-8xl sm:text-9xl md:text-[11rem] font-bold text-black tracking-tighter leading-none select-none font-ultra">
               404
@@ -171,7 +171,7 @@ export default function NotFoundClient() {
             Don't worry — our systems are up and we'll get you right back on track.
           </p>
 
-          {/* Quick Action Buttons */}
+          
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-16">
             <Link
               href="/"
@@ -201,7 +201,7 @@ export default function NotFoundClient() {
         </motion.div>
       </section>
 
-      {/* Directory / Search / Recommendations Grid */}
+      
       <section className="relative py-20 bg-subtle-grid border-t-2 border-dashed border-black">
         <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
           <div className="text-center mb-12">
@@ -215,7 +215,7 @@ export default function NotFoundClient() {
               Popular Destinations &amp; Services
             </h3>
 
-            {/* Interactive Search Filter */}
+            
             <div className="max-w-md mx-auto mt-6 relative">
               <div className="relative flex items-center">
                 <input
@@ -239,7 +239,7 @@ export default function NotFoundClient() {
             </div>
           </div>
 
-          {/* Cards Grid */}
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
               {filteredLinks.length > 0 ? (
@@ -309,7 +309,7 @@ export default function NotFoundClient() {
             </AnimatePresence>
           </div>
 
-          {/* Need Immediate Help Banner */}
+          
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}

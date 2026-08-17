@@ -71,8 +71,6 @@ export default function ContactPageClient() {
       <section className="relative pt-28 md:pt-40 pb-12 md:pb-16 px-6 md:px-12 max-w-5xl mx-auto text-center overflow-hidden">
         <Image src="/assets/icons/speech-bubble-drawn.svg" alt="" width={100} height={100} className="absolute top-20 right-10 md:right-32 opacity-60 animate-wobble hidden sm:block" />
 
-        {/* Not animation-gated: this heading is the LCP element on /contact and
-            was measuring 4.16s (Needs Improvement) behind the fade-in delay. */}
         <div>
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-black tracking-tight mb-4 sm:mb-8">
             <SketchHighlight color="yellow">Let's Build</SketchHighlight> Something That Lasts

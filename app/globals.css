@@ -9,9 +9,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* For now we will keep a very clean, bright aesthetic as requested,
-       but we can support a dark mode version later. Esvin Creative requested
-       clean white background with dark navy accents. */
     --background: #ffffff;
     --foreground: #0f172a;
   }

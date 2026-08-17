@@ -44,7 +44,7 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
+        
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
@@ -63,7 +63,7 @@ export default function Navbar() {
           </Link>
         </nav>
 
-        {/* Mobile Hamburger Button */}
+        
         <button
           className="md:hidden text-black p-2 flex items-center justify-center w-10 h-10 rounded sketch-border bg-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -73,7 +73,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      
       {isMobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}

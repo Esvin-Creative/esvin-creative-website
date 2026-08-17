@@ -6,7 +6,7 @@ import { caseStudies } from '@/lib/case-studies';
 
 
 
-const FALLBACK_DATE = new Date('2026-08-16T00:00:00.000Z');
+const FALLBACK_DATE = new Date('2026-08-17T00:00:00.000Z');
 
 function lastModifiedFor(filePath: string): Date {
   try {

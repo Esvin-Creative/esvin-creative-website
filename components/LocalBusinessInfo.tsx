@@ -26,8 +26,8 @@ export default function LocalBusinessInfo() {
         
         <div>
           <strong className="text-white block mb-1">Website</strong>
-          <a href="https://esvincreative.in" className="hover:text-highlight-yellow transition-colors underline">
-            https://esvincreative.in
+          <a href="https://www.esvincreative.in" className="hover:text-highlight-yellow transition-colors underline">
+            https://www.esvincreative.in
           </a>
         </div>
       </div>

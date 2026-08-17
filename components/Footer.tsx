@@ -61,7 +61,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://esvincreative.in" target="_blank" rel="noopener noreferrer" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">
+                  <a href="https://www.esvincreative.in" className="inline-block -my-2.5 py-2.5 text-lg font-ultra text-black/70 hover:text-black transition-colors">
                     esvincreative.in
                   </a>
                 </li>

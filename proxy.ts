@@ -14,9 +14,10 @@ function applySecurityHeaders(response: NextResponse) {
 }
 
 export function proxy(request: NextRequest) {
-  const host = request.headers.get("host");
+  const host = request.headers.get("host") || "";
+  const hostname = host.split(":")[0].toLowerCase();
 
-  if (host === APEX_HOST) {
+  if (hostname === APEX_HOST) {
     const url = request.nextUrl.clone();
     url.protocol = "https";
     url.hostname = CANONICAL_HOST;
@@ -25,7 +26,8 @@ export function proxy(request: NextRequest) {
     return applySecurityHeaders(redirect);
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+  return applySecurityHeaders(response);
 }
 
 export const config = {

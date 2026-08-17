@@ -14,6 +14,25 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.esvincreative.in/case-studies",
   },
+  openGraph: {
+    title: "Case Studies | Esvin Creative",
+    description: "Read our case studies to see how we solve complex technical challenges and deliver measurable business results.",
+    url: "https://www.esvincreative.in/case-studies",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Case Studies | Esvin Creative",
+    description: "Read our case studies to see how we solve complex technical challenges and deliver measurable business results.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function CaseStudiesHubPage() {

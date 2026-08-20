@@ -9,9 +9,9 @@ import AISearchBlocks from "@/components/AISearchBlocks";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Digital Technology Consulting Company in Hyderabad | Esvin Creative",
-  description: "Digital technology consulting for growing organizations in Hyderabad: digital transformation, system modernization, architecture reviews, and IT strategy.",
-  keywords: ["digital technology consulting company in hyderabad", "technology consulting hyderabad", "digital transformation consulting", "IT consulting", "technology strategy", "system modernization", "telangana", "india"],
+  title: "Digital Technology Consulting Company in Hyderabad | IT Strategy",
+  description: "Top digital technology consulting company in Hyderabad offering technology consulting services, AWS architecture, and infrastructure solutions for growing organizations.",
+  keywords: ["digital technology consulting company in hyderabad", "technology consulting services in hyderabad", "aws architecture service providers in hyderabad", "infrastructure solution providers in hyderabad", "technology strategy", "system modernization", "telangana", "india"],
   alternates: {
     canonical: "https://www.esvincreative.in/technology-consulting",
   },
@@ -103,10 +103,10 @@ export default function TechnologyConsultingPage() {
         
         <div className="max-w-7xl mx-auto">
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold font-ultra text-black mb-4 sm:mb-8 leading-tight">
-            Technology <SketchHighlight color="pink">Consulting</SketchHighlight>
+            Digital Technology <SketchHighlight color="pink">Consulting</SketchHighlight>
           </h1>
           <p className="text-lg sm:text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-6 sm:mb-10">
-            Digital technology consulting for organizations in Hyderabad, designed to align your technology investments with your business goals through digital transformation and system modernization.
+            As a leading digital technology consulting company in Hyderabad, we provide technology consulting services designed to align your technology investments with your business goals through digital transformation and system modernization.
           </p>
           <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm font-ultra text-black/50 mb-6 sm:mb-10">
             <span>Authored by: Esvin Joshua</span>
@@ -151,14 +151,14 @@ export default function TechnologyConsultingPage() {
             <div className="bg-highlight-pink/20 p-8 sketch-border sketch-shadow">
               <h3 className="text-3xl font-bold font-ultra text-black mb-4">Architecture Reviews</h3>
               <p className="text-lg font-ultra text-black/70 mb-6">
-                Before you invest heavily in development, we validate your technical architecture to ensure it will scale effectively, remain secure, and utilize the right technology stack for your specific use case.
+                Before you invest heavily in development, we validate your technical architecture to ensure it will scale effectively. As top AWS architecture service providers in Hyderabad, we ensure your stack remains secure and utilizes the right technology for your specific use case.
               </p>
             </div>
 
             <div className="bg-gray-50 p-8 sketch-border sketch-shadow">
               <h3 className="text-3xl font-bold font-ultra text-black mb-4">Vendor Consolidation</h3>
               <p className="text-lg font-ultra text-black/70 mb-6">
-                Paying for too many disjointed SaaS tools? We analyze your software spend and operational efficiency, often replacing expensive fragmented subscriptions with a single, unified custom platform.
+                Paying for too many disjointed SaaS tools? As premier infrastructure solution providers in Hyderabad, we analyze your software spend and operational efficiency, often replacing expensive fragmented subscriptions with a single, unified custom platform.
               </p>
             </div>
           </div>

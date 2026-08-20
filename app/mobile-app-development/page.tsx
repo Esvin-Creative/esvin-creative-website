@@ -9,9 +9,9 @@ import AISearchBlocks from "@/components/AISearchBlocks";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Mobile App Development Company Hyderabad | Esvin Creative",
-  description: "Expert mobile app development company in Hyderabad. We build high-performance iOS, Android, and cross-platform Flutter applications.",
-  keywords: ["mobile app development company hyderabad", "android app development", "ios app development", "flutter development", "cross platform development", "telangana", "india"],
+  title: "Mobile App Development Company Hyderabad | iOS & Android",
+  description: "Expert mobile app development company in Hyderabad. We build high-performance iOS, Android, and cross-platform Flutter applications across Telangana including Secunderabad, Khammam, and Warangal.",
+  keywords: ["mobile app development company hyderabad", "ios and android app development in secunderabad", "app development in khammam", "cross-platform app development in warangal", "cross platform app developers hyderabad", "flutter development", "telangana", "india"],
   alternates: {
     canonical: "https://www.esvincreative.in/mobile-app-development",
   },
@@ -106,7 +106,7 @@ export default function MobileAppDevelopmentPage() {
             Mobile App <SketchHighlight color="yellow">Development</SketchHighlight>
           </h1>
           <p className="text-lg sm:text-2xl font-ultra text-black/80 max-w-3xl leading-relaxed mb-6 sm:mb-10">
-            As a premier mobile app development company in Hyderabad, we engineer beautiful, scalable iOS and Android applications that users love.
+            As a premier mobile app development company in Hyderabad, we engineer beautiful, scalable iOS and Android applications that users love. We also serve clients needing cross-platform app development in Warangal, app development in Khammam, and iOS and Android app development in Secunderabad.
           </p>
           <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm font-ultra text-black/50 mb-6 sm:mb-10">
             <span>Authored by: Esvin Joshua</span>
@@ -223,7 +223,7 @@ export default function MobileAppDevelopmentPage() {
             Launch Your App with Confidence
           </h2>
           <p className="text-xl font-ultra text-black/80 mb-10">
-            Partner with India's leading mobile experts based in Telangana to build your next blockbuster application.
+            Partner with the leading cross platform app developers in Hyderabad and Telangana to build your next blockbuster application.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link href="/contact" className="px-8 py-4 bg-black text-white text-xl font-bold font-ultra sketch-border hover:bg-highlight-blue hover:text-black transition-colors w-full sm:w-auto">

@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": ["ProfessionalService", "LocalBusiness"],
   "@id": "https://www.esvincreative.in/#organization",
   "name": "Esvin Creative",
   "url": "https://www.esvincreative.in",
@@ -89,10 +89,13 @@ const organizationSchema = {
     "latitude": 17.3850,
     "longitude": 78.4867
   },
-  "areaServed": {
-    "@type": "City",
-    "name": "Hyderabad"
-  },
+  "areaServed": [
+    { "@type": "City", "name": "Hyderabad" },
+    { "@type": "City", "name": "Secunderabad" },
+    { "@type": "City", "name": "Khammam" },
+    { "@type": "City", "name": "Warangal" },
+    { "@type": "State", "name": "Telangana" }
+  ],
   "sameAs": [
     "https://github.com/Esvin-Creative",
     "https://www.linkedin.com/company/esvin-creative",
